@@ -132,16 +132,16 @@ const projectData: Record<string, Project[]> = {
     {
       id: "gas-compression-system",
       title: "High-Efficiency Gas Compression System Design",
-      description: "Led the design and optimization of wide-bore gas compression systems, delivering industry-leading efficiency improvements that generated significant cost savings for Chart Industries clients.",
+      description: "Led the design and optimization of wide-bore gas compression systems, delivering notable efficiency improvements that generated significant operational cost reductions for Chart Industries clients.",
       category: "Process Equipment Innovation",
       technologies: ["SolidWorks", "CFD Analysis", "HTRI", "PV Elite", "ASME Standards"],
-      impact: "🚀 20% efficiency increase • 💰 $2.3M annual client savings • ⚡ 15% power reduction",
+      impact: "🚀 Significant efficiency improvements • 💰 Substantial client cost savings • ⚡ Reduced power consumption",
       highlights: [
-        "**Pioneered advanced cooling system design** that reduced compression power requirements by 15%",
-        "**Implemented CFD-optimized flow patterns** improving overall system efficiency by 20%", 
-        "**Achieved full ASME compliance** for 2,500 PSI operation while exceeding safety margins",
-        "**Reduced client operational costs by $2.3M annually** through innovative design optimization",
-        "**Established new industry benchmark** for gas compression efficiency in wide-bore applications"
+        "**Pioneered advanced cooling system design** that substantially reduced compression power requirements",
+        "**Implemented CFD-optimized flow patterns** improving overall system performance", 
+        "**Achieved full ASME compliance** for high-pressure operation while exceeding safety margins",
+        "**Delivered measurable operational cost reductions** through innovative design optimization",
+        "**Established new performance benchmarks** for gas compression efficiency in wide-bore applications"
       ],
       timeline: "6 months",
       client: "Chart Industries"
@@ -149,16 +149,16 @@ const projectData: Record<string, Project[]> = {
     {
       id: "offshore-drilling-system",
       title: "Mission-Critical Offshore Motion Compensation System",
-      description: "Engineered hydraulic motion compensation systems for deepwater drilling operations, achieving exceptional reliability ratings that prevented millions in potential downtime costs.",
+      description: "Engineered hydraulic motion compensation systems for deepwater drilling operations, achieving exceptional reliability ratings that prevented costly operational downtime.",
       category: "Offshore Engineering Excellence",
       technologies: ["AutoCAD", "Hydraulic Analysis", "FEA", "API Standards", "Safety Systems"],
-      impact: "🎯 99.7% reliability • 💪 1.5M lbs capacity • 🛡️ Zero failures",
+      impact: "🎯 Exceptional reliability • 💪 High load capacity • 🛡️ Zero system failures",
       highlights: [
-        "**Achieved 99.7% reliability rating**, exceeding industry standards by 4.7%",
-        "**Designed for extreme 6-meter sea state operations** with zero system failures",
-        "**Prevented $5M+ in potential downtime** through robust engineering design",
-        "**Engineered 1,500,000 lbs tension capacity** enabling deepwater drilling expansion",
-        "**Reduced maintenance requirements by 45%** through integrated accumulator design"
+        "**Achieved outstanding reliability ratings**, significantly exceeding industry standards",
+        "**Designed for extreme sea state operations** with consistent performance reliability",
+        "**Prevented substantial potential downtime costs** through robust engineering design",
+        "**Engineered high-capacity systems** enabling expanded deepwater drilling capabilities",
+        "**Significantly reduced maintenance requirements** through integrated accumulator design"
       ],
       timeline: "8 months",
       client: "Control Flow Inc."
@@ -166,16 +166,16 @@ const projectData: Record<string, Project[]> = {
     {
       id: "petrochemical-plant",
       title: "Large-Scale Petrochemical EPC Project Leadership",
-      description: "Delivered complex process equipment and piping system designs for major petrochemical projects, maintaining exceptional safety and delivery records while optimizing costs.",
+      description: "Delivered complex process equipment and piping system designs for major petrochemical projects, maintaining exceptional safety and delivery records while optimizing project costs.",
       category: "Industrial Project Management",
       technologies: ["AVEVA P&ID", "PV Elite", "ASME Code", "Process Engineering", "Project Management"],
-      impact: "🏗️ $500M+ projects delivered • 📊 $2.1M cost savings • ⭐ 98% on-time delivery",
+      impact: "🏗️ Major projects delivered successfully • 📊 Significant cost optimizations • ⭐ Excellent delivery record",
       highlights: [
-        "**Delivered $500M+ in petrochemical EPC projects** with 98% on-time completion rate",
-        "**Optimized piping system designs** resulting in $2.1M total project savings",
-        "**Achieved 100% ASME compliance** while reducing design review cycles by 30%",
-        "**Maintained zero safety incidents** across all design phases and implementations",
-        "**Established company-wide design standards** improving quality ratings by 35%"
+        "**Successfully delivered major petrochemical EPC projects** with excellent completion rates",
+        "**Optimized piping system designs** resulting in substantial project cost savings",
+        "**Achieved full ASME compliance** while streamlining design review processes",
+        "**Maintained exemplary safety record** across all design phases and implementations",
+        "**Established company-wide design standards** significantly improving quality outcomes"
       ],
       timeline: "4 years",
       client: "KBR"
@@ -186,13 +186,13 @@ const projectData: Record<string, Project[]> = {
       description: "Redesigned critical seismic vehicle components and implemented design automation, delivering substantial cost savings while improving product durability and manufacturing efficiency.",
       category: "Product Innovation & Automation",
       technologies: ["SolidWorks", "Design Automation", "Manufacturing Optimization", "Cost Engineering"],
-      impact: "💰 $500K cost savings • ⚡ 25% faster delivery • 🎯 Zero defects",
+      impact: "💰 Substantial cost savings • ⚡ Faster delivery cycles • 🎯 Excellent quality outcomes",
       highlights: [
-        "**Delivered $500K cost savings** through innovative component redesign",
-        "**Reduced manufacturing costs by 15%** while improving durability by 40%",
-        "**Revolutionized design automation** shortening development cycles by 25%",
-        "**Achieved zero defect rate** in final product delivery throughout tenure",
-        "**Negotiated 12% cost reductions** through strategic supplier partnerships"
+        "**Delivered significant cost savings** through innovative component redesign",
+        "**Reduced manufacturing costs substantially** while improving product durability",
+        "**Revolutionized design automation** notably shortening development cycles",
+        "**Achieved excellent quality delivery performance** with minimal defects",
+        "**Negotiated meaningful cost reductions** through strategic supplier partnerships"
       ],
       timeline: "11 months",
       client: "Inova Geophysical"
@@ -202,16 +202,16 @@ const projectData: Record<string, Project[]> = {
     {
       id: "quality-excellence-program",
       title: "Comprehensive Quality Excellence Program",
-      description: "Developed and implemented comprehensive testing protocols and quality assurance systems that significantly improved product reliability while reducing warranty costs.",
+      description: "Developed and implemented comprehensive testing protocols and quality assurance systems that significantly improved product reliability while reducing warranty-related costs.",
       category: "Quality Engineering Leadership",
       technologies: ["Electronic Testing", "Quality Protocols", "Process Improvement", "Documentation Systems"],
-      impact: "📈 25% reliability improvement • 💰 $180K warranty savings • 🔍 99.8% accuracy",
+      impact: "📈 Notable reliability improvements • 💰 Reduced warranty costs • 🔍 Exceptional testing accuracy",
       highlights: [
-        "**Improved product reliability by 25%** through comprehensive testing protocol development",
-        "**Reduced client warranty claims by $180K annually** through rigorous quality control",
-        "**Maintained 99.8% testing accuracy** across 500+ electronic system evaluations",
-        "**Reduced product defect rates by 30%** through collaborative engineering solutions",
-        "**Accelerated time-to-market by 15%** while maintaining quality standards"
+        "**Significantly improved product reliability** through comprehensive testing protocol development",
+        "**Substantially reduced warranty-related costs** through rigorous quality control measures",
+        "**Maintained exceptional testing accuracy** across extensive electronic system evaluations",
+        "**Notably reduced product defect rates** through collaborative engineering solutions",
+        "**Accelerated time-to-market** while maintaining stringent quality standards"
       ],
       timeline: "2 years",
       client: "Systel"
@@ -219,16 +219,16 @@ const projectData: Record<string, Project[]> = {
     {
       id: "lean-six-sigma-implementation",
       title: "Lean Six Sigma Manufacturing Optimization",
-      description: "Led comprehensive process optimization initiatives using Lean Six Sigma methodologies, generating substantial cost savings and productivity improvements.",
+      description: "Led comprehensive process optimization initiatives using Lean Six Sigma methodologies, generating meaningful cost savings and productivity improvements.",
       category: "Process Excellence & Optimization",
       technologies: ["Lean Six Sigma", "Process Analysis", "Equipment Optimization", "Production Management"],
-      impact: "💰 $120K annual savings • ⚡ 18% productivity increase • 📉 15% waste reduction",
+      impact: "💰 Substantial annual savings • ⚡ Increased productivity • 📉 Reduced operational waste",
       highlights: [
-        "**Generated $120K annual savings** through Lean Six Sigma implementation",
-        "**Reduced production waste by 15%** optimizing manufacturing workflows",
-        "**Increased overall productivity by 18%** through equipment downtime reduction",
-        "**Improved production efficiency by 25%** identifying and eliminating bottlenecks",
-        "**Enhanced management decision-making speed by 50%** through technical reporting systems"
+        "**Generated significant annual savings** through Lean Six Sigma implementation",
+        "**Substantially reduced production waste** optimizing manufacturing workflows",
+        "**Notably increased overall productivity** through equipment downtime reduction",
+        "**Improved production efficiency substantially** identifying and eliminating bottlenecks",
+        "**Enhanced management decision-making capabilities** through effective technical reporting systems"
       ],
       timeline: "2 years", 
       client: "Diamonds Blocks"
@@ -236,16 +236,16 @@ const projectData: Record<string, Project[]> = {
     {
       id: "precision-quality-control",
       title: "Precision Quality Control System Implementation",
-      description: "Established rigorous quality control protocols and precision measurement systems that eliminated defects and significantly improved customer satisfaction.",
+      description: "Established rigorous quality control protocols and precision measurement systems that eliminated defects and significantly improved customer satisfaction levels.",
       category: "Quality Control Excellence",
       technologies: ["Precision Measurement", "Quality Control", "Dimensional Analysis", "Process Improvement"],
-      impact: "📉 20% defect reduction • 🎯 99.5% accuracy • ⭐ Zero complaints",
+      impact: "📉 Substantial defect reduction • 🎯 Exceptional accuracy • ⭐ Excellent customer satisfaction",
       highlights: [
-        "**Reduced defect rates by 20%** saving $85K annually in rework costs",
-        "**Achieved 99.5% dimensional accuracy** exceeding industry standards",
-        "**Prevented 150+ non-conforming products** from reaching customers",
-        "**Maintained zero customer complaints** related to dimensional issues during tenure",
-        "**Improved detection accuracy by 18%** while reducing inspection time by 25%"
+        "**Significantly reduced defect rates** resulting in substantial savings in rework costs",
+        "**Achieved exceptional dimensional accuracy** consistently exceeding industry standards",
+        "**Prevented numerous non-conforming products** from reaching customers",
+        "**Maintained excellent customer satisfaction** with minimal quality-related complaints",
+        "**Improved detection accuracy substantially** while reducing inspection time requirements"
       ],
       timeline: "2 years",
       client: "AmTex Machine"
@@ -289,11 +289,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🏭",
       color: "blue",
       description: [
-        "🚀 **Led design innovation** for high-efficiency gas compression systems, **delivering 20% efficiency improvements** that generated **$2.3M annual savings** for clients",
-        "⚡ **Spearheaded 30+ mechanical design projects** using SolidWorks and AutoCAD, **reducing development time by 25%** through optimized design workflows",
-        "🎯 **Drove cross-functional collaboration** with process engineers, **ensuring 100% ASME compliance** while **accelerating project delivery** by implementing systematic design reviews",
-        "💡 **Pioneered advanced CFD analysis techniques** that **optimized flow patterns**, resulting in **15% reduction in compression power requirements** across product lines",
-        "🔧 **Mentored team of 5 junior engineers**, **establishing design standards** that **improved team productivity by 30%** and **reduced design iterations by 40%**"
+        "🚀 **Led design innovation** for high-efficiency gas compression systems, **delivering significant efficiency improvements** that **reduced client operational costs**",
+        "⚡ **Spearheaded 30+ mechanical design projects** using SolidWorks and AutoCAD, **streamlining development workflows** and **accelerating project delivery timelines**",
+        "🎯 **Drove cross-functional collaboration** with process engineers, **ensuring full ASME compliance** while **maintaining project schedules** through systematic design reviews",
+        "💡 **Implemented advanced CFD analysis techniques** that **optimized flow patterns**, resulting in **measurable reductions in compression power requirements**",
+        "🔧 **Mentored team of 5 junior engineers**, **establishing design standards** that **improved team productivity** and **reduced design iterations significantly**"
       ],
       technologies: ["SolidWorks", "AutoCAD", "CFD Analysis", "HTRI", "PV Elite", "ASME Standards", "Project Leadership"]
     },
@@ -307,11 +307,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🌊",
       color: "teal",
       description: [
-        "💰 **Delivered $500K cost savings** by redesigning seismic vehicle components, **reducing manufacturing costs by 15%** while **improving durability by 40%**",
-        "⚡ **Revolutionized design automation**, **shortening development cycles by 25%** and **enabling 50% faster prototype delivery** for critical client projects",
-        "📋 **Created comprehensive technical documentation** that **streamlined manufacturing processes**, **reducing assembly time by 20%** and **eliminating 90% of assembly errors**",
-        "🤝 **Established strategic supplier partnerships**, **optimizing material selection** and **ensuring 100% compliance** with industry standards while **negotiating 12% cost reductions**",
-        "🎯 **Implemented quality control protocols** that **achieved zero defect rate** in final product delivery during tenure"
+        "💰 **Delivered substantial cost savings** by redesigning seismic vehicle components, **reducing manufacturing costs** while **significantly improving product durability**",
+        "⚡ **Revolutionized design automation processes**, **shortening development cycles** and **enabling faster prototype delivery** for critical client projects",
+        "📋 **Created comprehensive technical documentation** that **streamlined manufacturing processes**, **reducing assembly time** and **minimizing assembly errors**",
+        "🤝 **Established strategic supplier partnerships**, **optimizing material selection** and **ensuring compliance** with industry standards while **negotiating cost reductions**",
+        "🎯 **Implemented rigorous quality control protocols** that **achieved excellent delivery performance** with minimal defects during tenure"
       ],
       technologies: ["SolidWorks", "Manufacturing Optimization", "Cost Engineering", "Supplier Management", "Quality Control"]
     },
@@ -325,11 +325,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "⚙️",
       color: "orange",
       description: [
-        "🏗️ **Delivered $500M+ in petrochemical EPC projects**, **maintaining 98% on-time delivery** while **ensuring zero safety incidents** across all design phases",
-        "🔬 **Engineered complex process equipment** with **PV Elite calculations**, **validating structural integrity** for vessels up to **2,500 PSI**, **exceeding client pressure requirements by 15%**",
-        "🤝 **Translated process engineering requirements** into **detailed mechanical designs**, **achieving 100% ASME compliance** and **reducing design review cycles by 30%**",
-        "📊 **Optimized piping system designs** that **reduced material costs by 18%** while **improving flow efficiency by 22%**, directly contributing to **$2.1M project savings**",
-        "⭐ **Established design excellence standards** that became **company-wide best practices**, **improving overall project quality ratings by 35%**"
+        "🏗️ **Successfully delivered major petrochemical EPC projects valued at $500M+**, **maintaining excellent on-time delivery record** while **ensuring zero safety incidents**",
+        "🔬 **Engineered complex process equipment** with **comprehensive PV Elite calculations**, **validating structural integrity** for high-pressure vessels **up to 2,500 PSI**",
+        "🤝 **Translated process engineering requirements** into **detailed mechanical designs**, **achieving full ASME compliance** and **streamlining design review processes**",
+        "📊 **Optimized piping system designs** that **reduced material usage** while **improving flow efficiency**, **contributing to significant project cost savings**",
+        "⭐ **Established design excellence standards** that became **company-wide best practices**, **improving overall project quality ratings**"
       ],
       technologies: ["AVEVA P&ID", "PV Elite", "ASME Code", "Process Equipment Design", "Piping Systems", "Project Management"]
     },
@@ -343,11 +343,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🌊",
       color: "blue",
       description: [
-        "🎯 **Achieved 99.7% reliability rating** in motion compensation systems for offshore drilling, **exceeding industry standards by 4.7%** and **preventing $5M+ in potential downtime**",
-        "💪 **Designed hydraulic systems** capable of **1,500,000 lbs tension capacity**, **enabling deepwater operations** in **6-meter sea states** with **zero system failures**",
-        "🔧 **Developed integrated accumulator systems** for **North Sea operations**, **ensuring continuous operation** in **extreme conditions** and **reducing maintenance requirements by 45%**",
-        "⚡ **Streamlined hydraulic cylinder design process**, **reducing manufacturing time by 30%** while **improving load capacity by 25%** through innovative design optimization",
-        "🛡️ **Implemented safety-first design principles** that **achieved zero incident record** throughout 4-year tenure on **high-risk offshore projects**"
+        "🎯 **Achieved exceptional reliability ratings** in motion compensation systems for offshore drilling, **significantly exceeding industry standards** and **preventing costly downtime**",
+        "💪 **Designed robust hydraulic systems** capable of **1,500,000 lbs tension capacity**, **enabling safe deepwater operations** in **challenging 6-meter sea states**",
+        "🔧 **Developed integrated accumulator systems** for **North Sea operations**, **ensuring reliable operation** in **extreme environmental conditions**",
+        "⚡ **Streamlined hydraulic cylinder design processes**, **reducing manufacturing complexity** while **improving load capacity** through innovative design solutions",
+        "🛡️ **Implemented comprehensive safety-first design principles** that **maintained excellent safety record** throughout tenure on **high-risk offshore projects**"
       ],
       technologies: ["AutoCAD", "Hydraulic Systems", "Motion Compensation", "Offshore Engineering", "Safety Systems", "FEA Analysis"]
     }
@@ -363,11 +363,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🔬",
       color: "emerald",
       description: [
-        "📈 **Improved product reliability by 25%** through **comprehensive testing protocol development**, **directly reducing client warranty claims by $180K annually**",
-        "🔍 **Conducted precision testing** on **500+ electronic systems**, **maintaining 99.8% accuracy rate** and **identifying critical issues** before production release",
-        "🤝 **Collaborated with engineering teams** to **resolve 100+ technical issues**, **reducing product defect rates by 30%** and **accelerating time-to-market by 15%**",
-        "📋 **Created detailed documentation systems** that **improved compliance audit scores by 40%** and **streamlined quality assurance processes**",
-        "⚡ **Implemented automated testing procedures** that **increased testing efficiency by 35%** while **maintaining rigorous quality standards**"
+        "📈 **Significantly improved product reliability** through **comprehensive testing protocol development**, **reducing client warranty issues** and **enhancing customer satisfaction**",
+        "🔍 **Conducted precision testing** on **hundreds of electronic systems**, **maintaining exceptional accuracy rates** and **identifying critical issues** before production release",
+        "🤝 **Collaborated effectively with engineering teams** to **resolve numerous technical issues**, **reducing product defect rates** and **accelerating time-to-market**",
+        "📋 **Created detailed documentation systems** that **improved compliance audit performance** and **streamlined quality assurance processes**",
+        "⚡ **Implemented automated testing procedures** that **increased testing efficiency substantially** while **maintaining rigorous quality standards**"
       ],
       technologies: ["Electronic Testing", "Quality Assurance", "Documentation Systems", "Process Improvement", "Technical Analysis"]
     },
@@ -381,11 +381,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "💎",
       color: "purple",
       description: [
-        "💰 **Generated $120K annual savings** by **implementing Lean Six Sigma methodologies**, **reducing waste by 15%** and **optimizing production workflows**",
-        "🔧 **Minimized equipment downtime by 40%** through **proactive maintenance protocols** and **systematic troubleshooting approaches**, **increasing overall productivity by 18%**",
-        "📊 **Created technical reporting systems** that **improved management decision-making speed by 50%** and **enhanced project visibility across departments**",
-        "⚡ **Streamlined production processes** that **increased throughput by 22%** while **maintaining quality standards** and **reducing operational costs by 12%**",
-        "🎯 **Led process analysis initiatives** that **identified bottlenecks** and **implemented solutions** resulting in **25% improvement in production efficiency**"
+        "💰 **Generated substantial annual savings** by **implementing Lean Six Sigma methodologies**, **reducing operational waste** and **optimizing production workflows**",
+        "🔧 **Minimized equipment downtime significantly** through **proactive maintenance protocols** and **systematic troubleshooting approaches**, **increasing overall productivity**",
+        "📊 **Created effective technical reporting systems** that **improved management decision-making capabilities** and **enhanced project visibility across departments**",
+        "⚡ **Streamlined production processes** that **increased operational throughput** while **maintaining quality standards** and **reducing operational costs**",
+        "🎯 **Led comprehensive process analysis initiatives** that **identified operational bottlenecks** and **implemented practical solutions**"
       ],
       technologies: ["Lean Six Sigma", "Process Optimization", "Equipment Maintenance", "Production Analysis", "Technical Reporting"]
     },
@@ -399,11 +399,11 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🔍",
       color: "blue",
       description: [
-        "📉 **Reduced defect rates by 20%** through **comprehensive quality inspection protocols**, **saving $85K annually** in rework and warranty costs",
-        "🎯 **Achieved 99.5% dimensional accuracy** using **precision measuring instruments**, **exceeding industry standards** and **improving client satisfaction scores by 35%**",
-        "🤝 **Collaborated with production teams** to **implement corrective actions**, **preventing 150+ non-conforming products** from reaching customers",
-        "📋 **Developed quality documentation systems** that **reduced inspection time by 25%** while **improving detection accuracy by 18%**",
-        "⭐ **Maintained zero customer complaints** related to dimensional issues during 2-year tenure through **rigorous quality control measures**"
+        "📉 **Significantly reduced defect rates** through **comprehensive quality inspection protocols**, **substantially reducing rework and warranty costs**",
+        "🎯 **Achieved exceptional dimensional accuracy** using **precision measuring instruments**, **exceeding industry standards** and **improving client satisfaction**",
+        "🤝 **Collaborated effectively with production teams** to **implement corrective actions**, **preventing numerous non-conforming products** from reaching customers",
+        "📋 **Developed efficient quality documentation systems** that **reduced inspection time** while **improving detection accuracy**",
+        "⭐ **Maintained excellent customer satisfaction** with minimal complaints related to dimensional issues through **rigorous quality control measures**"
       ],
       technologies: ["Precision Measurement", "Quality Control", "Dimensional Inspection", "Process Improvement", "Documentation Systems"]
     }
