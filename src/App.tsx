@@ -1545,8 +1545,8 @@ const downloadResume = (profile: string) => {
 
 // Profile color gradients for avatars
 const profileColors = {
-  david: 'from-blue-600 to-indigo-600',
-  wife: 'from-emerald-600 to-teal-600'
+  david: 'from-blue-600 to-indigo-700',
+  wife: 'from-purple-600 to-violet-700'
 }
 
 // Company Logo Component
@@ -1632,8 +1632,8 @@ function Navigation({ activeSection, setActiveSection, currentProfile, downloadR
   ]
 
   const profileColors = {
-    david: 'from-blue-600 to-indigo-600',
-    wife: 'from-emerald-600 to-teal-600'
+    david: 'from-blue-600 to-indigo-700',
+    wife: 'from-purple-600 to-violet-700'
   }
 
   return (
@@ -1749,17 +1749,17 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
   
   const profileGradients = {
     david: 'from-blue-50 via-indigo-50 to-cyan-100',
-    wife: 'from-emerald-50 via-teal-50 to-cyan-100'
+    wife: 'from-purple-50 via-violet-50 to-indigo-100'
   }
 
   const buttonColors = {
     david: {
-      primary: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:scale-105',
-      secondary: 'bg-white/10 backdrop-blur-sm border border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300'
+      primary: 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl',
+      secondary: 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
     },
     wife: {
-      primary: 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg hover:shadow-xl transform hover:scale-105',
-      secondary: 'bg-white/10 backdrop-blur-sm border border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300'
+      primary: 'bg-purple-600 text-white hover:bg-purple-700 shadow-lg hover:shadow-xl',
+      secondary: 'bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-50'
     }
   }
 
@@ -1785,7 +1785,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
             className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{ backgroundImage: 'url(/elsa-background.png)' }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-purple-500/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-violet-500/20"></div>
         </>
       )}
       
@@ -1823,15 +1823,15 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
-              <MapPin className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
+              <MapPin className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-purple-600'}`} />
               <span className="text-gray-700">{profile.location}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
-              <Mail className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
+              <Mail className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-purple-600'}`} />
               <span className="text-gray-700">{profile.email}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
-              <Phone className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
+              <Phone className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-purple-600'}`} />
               <span className="text-gray-700">{profile.phone}</span>
             </div>
           </div>
@@ -1921,8 +1921,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Lightbulb className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <Lightbulb className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Latest Engineering Knowledge</h4>
@@ -1931,8 +1931,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <TrendingUp className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">High Growth Potential</h4>
@@ -1941,8 +1941,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Globe className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <Globe className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Trilingual Advantage</h4>
@@ -1953,8 +1953,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Target className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <Target className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Proven Quality Focus</h4>
@@ -1963,8 +1963,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Users className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <Users className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Fresh Perspective</h4>
@@ -1973,8 +1973,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Zap className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <Zap className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Digital Native Skills</h4>
@@ -1984,9 +1984,9 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                 </div>
               </div>
               
-              <div className="mt-8 p-6 bg-emerald-50 rounded-xl border border-emerald-200">
-                <h4 className="font-bold text-emerald-800 mb-2">Investment in Your Future</h4>
-                <p className="text-emerald-700 text-sm">
+              <div className="mt-8 p-6 bg-purple-50 rounded-xl border border-purple-200">
+                <h4 className="font-bold text-purple-800 mb-2">Investment in Your Future</h4>
+                <p className="text-purple-700 text-sm">
                   Hiring a talented new graduate like Elsa means investing in someone who will grow with your company, 
                   contribute fresh ideas, and develop into a cornerstone of your engineering team for years to come.
                 </p>
@@ -2261,12 +2261,12 @@ function SkillsSection({ currentProfile }: { currentProfile: string }) {
   
   const profileColors = {
     david: 'text-blue-600',
-    wife: 'text-emerald-600'
+    wife: 'text-purple-600'
   }
 
   const profileBgs = {
     david: 'bg-blue-100',
-    wife: 'bg-emerald-100'
+    wife: 'bg-purple-100'
   }
 
   return (
@@ -2315,7 +2315,7 @@ function ContactSection({ currentProfile, downloadResume }: { currentProfile: st
   
   const profileGradients = {
     david: 'from-blue-600 to-indigo-700',
-    wife: 'from-emerald-600 to-teal-700'
+    wife: 'from-purple-600 to-violet-700'
   }
 
   return (
@@ -2843,9 +2843,9 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
       secondary: 'indigo-600'
     },
     wife: {
-      gradient: 'from-emerald-50 via-teal-50 to-cyan-100', 
-      accent: 'emerald-600',
-      secondary: 'teal-600'
+      gradient: 'from-purple-50 via-violet-50 to-indigo-100', 
+      accent: 'purple-600',
+      secondary: 'violet-600'
     }
   }
 
