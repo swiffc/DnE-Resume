@@ -46,6 +46,7 @@ interface Profile {
   location: string
   summary: string
   avatar: string
+  profileImage?: string
 }
 
 interface Experience {
@@ -121,7 +122,8 @@ const profiles: Record<string, Profile> = {
     phone: "832-584-1634",
     location: "Houston, TX",
     summary: "Mechanical Designer with over 15 years of experience in process equipment design, P&ID development, and cross-discipline engineering for oil, gas, and petrochemical industries. Expert in SolidWorks, Autodesk Inventor, and AutoCAD with strong foundation for AVEVA/Intelligent P&ID systems.",
-    avatar: "DC"
+    avatar: "DC",
+    profileImage: "/david-profile.jpg"
   },
   wife: {
     name: "Elsa Nlang Monsuy",
@@ -1468,76 +1470,81 @@ function AboutSection({ currentProfile }: { currentProfile: string }) {
   
   const profileGradients = {
     david: 'from-blue-50 via-indigo-50 to-cyan-100',
-    wife: 'from-emerald-50 via-teal-50 to-green-100'
-  }
-
-  const avatarGradients = {
-    david: 'from-blue-600 to-indigo-600',
-    wife: 'from-emerald-600 to-teal-600'
+    wife: 'from-emerald-50 via-teal-50 to-cyan-100'
   }
 
   const buttonColors = {
     david: {
-      primary: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700',
-      secondary: 'text-blue-700 bg-blue-100 hover:bg-blue-200'
+      primary: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:scale-105',
+      secondary: 'bg-white/10 backdrop-blur-sm border border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300'
     },
     wife: {
-      primary: 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700',
-      secondary: 'text-emerald-700 bg-emerald-100 hover:bg-emerald-200'
+      primary: 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg hover:shadow-xl transform hover:scale-105',
+      secondary: 'bg-white/10 backdrop-blur-sm border border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300'
     }
   }
 
   return (
-    <section className={`section-padding bg-gradient-to-br ${profileGradients[currentProfile as keyof typeof profileGradients]} pt-32`}>
-      <div className="container">
+    <section className={`section-padding bg-gradient-to-br ${profileGradients[currentProfile as keyof typeof profileGradients]} relative overflow-hidden`}>
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+      <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-8"
           >
-            <div className={`w-32 h-32 bg-gradient-to-br ${avatarGradients[currentProfile as keyof typeof avatarGradients]} rounded-full mx-auto mb-8 flex items-center justify-center text-white text-4xl font-bold animate-float`}>
-              {profile.avatar}
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              <span className="text-gradient">{profile.name}</span>
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
-              {profile.title}
-            </h2>
-            <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
-              {profile.summary}
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
-                <MapPin className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
-                <span className="text-gray-700">{profile.location}</span>
+            {profile.profileImage ? (
+              <img 
+                src={profile.profileImage} 
+                alt={`${profile.name} - ${profile.title}`}
+                className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white shadow-2xl"
+              />
+            ) : (
+              <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-br ${profileColors[currentProfile as keyof typeof profileColors]} flex items-center justify-center text-white text-4xl font-bold shadow-2xl border-4 border-white`}>
+                {profile.avatar}
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
-                <Mail className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
-                <span className="text-gray-700">{profile.email}</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
-                <Phone className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
-                <span className="text-gray-700">{profile.phone}</span>
-              </div>
-            </div>
-
-            <div className="flex justify-center gap-4">
-              <button className={`inline-flex items-center px-6 py-3 text-base font-medium text-white border border-transparent rounded-lg shadow-sm transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].primary}`}>
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Get in Touch
-              </button>
-              <button 
-                onClick={() => downloadResume(currentProfile)}
-                className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </button>
-            </div>
+            )}
           </motion.div>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <span className="text-gradient">{profile.name}</span>
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
+            {profile.title}
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
+            {profile.summary}
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+              <MapPin className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
+              <span className="text-gray-700">{profile.location}</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+              <Mail className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
+              <span className="text-gray-700">{profile.email}</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+              <Phone className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-emerald-600'}`} />
+              <span className="text-gray-700">{profile.phone}</span>
+            </div>
+          </div>
+
+          <div className="flex justify-center gap-4">
+            <button className={`inline-flex items-center px-6 py-3 text-base font-medium text-white border border-transparent rounded-lg shadow-sm transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].primary}`}>
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Get in Touch
+            </button>
+            <button 
+              onClick={() => downloadResume(currentProfile)}
+              className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Resume
+            </button>
+          </div>
         </div>
       </div>
     </section>
