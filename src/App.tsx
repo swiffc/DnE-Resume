@@ -127,12 +127,13 @@ const profiles: Record<string, Profile> = {
   },
   wife: {
     name: "Elsa Nlang Monsuy",
-    title: "Mechanical Engineer", 
+    title: "Mechanical Engineer",
     email: "elsamonsuy@yahoo.com",
     phone: "(713) 820-2968",
     location: "Houston, TX",
-    summary: "Motivated Mechanical Engineer with experience in Lean Six Sigma processes, project design, manufacturing, quality control, production, and project management. Highly motivated and dynamic professional with strong communication skills. Adept in testing and troubleshooting technical problems. Trilingual in Spanish, English, and French.",
-    avatar: "EN"
+    summary: "Motivated Mechanical Engineer with experience in Lean Six Sigma processes, project design, manufacturing, quality control, production, and project management. Highly motivated and dynamic professional with strong communication skills.",
+    avatar: "EN",
+    profileImage: "/elsa-profile.jpg"
   }
 }
 
