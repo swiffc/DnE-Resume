@@ -19,6 +19,15 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Make all text black and bold */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-black font-bold;
+  }
+  
+  p, span, div, li {
+    @apply text-black font-semibold;
+  }
 }
 
 @layer components {

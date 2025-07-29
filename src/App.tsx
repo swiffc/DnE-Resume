@@ -1782,14 +1782,14 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
       {currentProfile === 'wife' && (
         <>
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-10"
+            className="absolute inset-0 bg-cover bg-center opacity-35"
             style={{ backgroundImage: 'url(/elsa-background.png)' }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-violet-500/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10"></div>
         </>
       )}
       
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-none"></div>
       
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -2004,10 +2004,10 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
             >
               {/* Faded Background Image */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-20"
+                className="absolute inset-0 bg-cover bg-center opacity-45"
                 style={{ backgroundImage: 'url(/elsa-background.png)' }}
               ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-gray-900/80 to-indigo-900/80"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-gray-900/70 to-indigo-900/70"></div>
               
               <div className="relative z-10">
                 <div className="text-center mb-8">
@@ -2111,9 +2111,9 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
 
 // Experience Section
 function ExperienceSection({ currentProfile }: { currentProfile: string }) {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState(0)
   const currentExperiences = allExperiences[currentProfile] || []
-  const navigate = useNavigate()
 
   const getColorClasses = (color: string) => {
     const colors = {
