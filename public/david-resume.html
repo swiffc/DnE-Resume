@@ -253,10 +253,31 @@
                 max-width: none;
                 height: auto;
             }
+            .print-button { display: none; }
         }
     </style>
+    <script>
+        function printResume() {
+            window.print();
+        }
+        
+        // Auto-print when accessed via download
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('print') === 'true') {
+                setTimeout(printResume, 500);
+            }
+        });
+    </script>
 </head>
 <body>
+    <div style="text-align: center; padding: 10px; background: #f0f0f0; print: none;" class="print-button">
+        <button onclick="printResume()" style="background: #4a9999; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 14px;">
+            🖨️ Print/Save as PDF
+        </button>
+        <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Use your browser's print function to save as PDF</p>
+    </div>
+    
     <div class="resume">
         <div class="sidebar">
             <div class="profile-section">

@@ -1272,6 +1272,36 @@ const companyDetails: Record<string, CompanyDetail> = {
   }
 }
 
+// Resume download function with fallback
+const downloadResume = (profile: string) => {
+  // Open HTML resume in new tab with print parameter
+  const htmlUrl = profile === 'david' ? '/david-resume.html?print=true' : '/elsa-resume.html?print=true'
+  
+  console.log(`Opening resume for ${profile}:`, htmlUrl)
+  
+  try {
+    // Open in new tab - this will trigger auto-print due to the ?print=true parameter
+    const newWindow = window.open(htmlUrl, '_blank')
+    
+    if (!newWindow) {
+      // If popup blocked, fallback to direct navigation
+      window.location.href = htmlUrl
+    }
+    
+    console.log('Resume opened successfully')
+  } catch (error) {
+    console.error('Resume open failed:', error)
+    // Final fallback
+    window.location.href = htmlUrl
+  }
+}
+
+// Profile color gradients for avatars
+const profileColors = {
+  david: 'from-blue-600 to-indigo-600',
+  wife: 'from-emerald-600 to-teal-600'
+}
+
 // Company Logo Component
 function CompanyLogo({ companyId, size = "text-4xl" }: { companyId: string, size?: string }) {
   const logos: Record<string, React.ReactNode> = {
@@ -1337,10 +1367,11 @@ function PortfolioSwitcher({ activeProfile, setActiveProfile }: { activeProfile:
 }
 
 // Navigation Component
-function Navigation({ activeSection, setActiveSection, currentProfile }: { 
+function Navigation({ activeSection, setActiveSection, currentProfile, downloadResume }: { 
   activeSection: string, 
   setActiveSection: (section: string) => void,
-  currentProfile: string 
+  currentProfile: string,
+  downloadResume: (profile: string) => void
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const profile = profiles[currentProfile]
@@ -1465,7 +1496,7 @@ function Navigation({ activeSection, setActiveSection, currentProfile }: {
 }
 
 // About Section
-function AboutSection({ currentProfile }: { currentProfile: string }) {
+function AboutSection({ currentProfile, downloadResume }: { currentProfile: string, downloadResume: (profile: string) => void }) {
   const profile = profiles[currentProfile]
   
   const profileGradients = {
@@ -1752,7 +1783,7 @@ function SkillsSection({ currentProfile }: { currentProfile: string }) {
 }
 
 // Contact Section
-function ContactSection({ currentProfile }: { currentProfile: string }) {
+function ContactSection({ currentProfile, downloadResume }: { currentProfile: string, downloadResume: (profile: string) => void }) {
   const profile = profiles[currentProfile]
   
   const profileGradients = {
@@ -2306,29 +2337,6 @@ function App() {
     setActiveSection(sectionId)
   }
 
-  // Resume download function with fallback
-  const downloadResume = (profile: string) => {
-    const pdfUrl = profile === 'david' ? '/david-resume.pdf' : '/elsa-resume.pdf'
-    const htmlUrl = profile === 'david' ? '/david-resume.html' : '/elsa-resume.html'
-    const fileName = profile === 'david' ? 'David_Cornealius_Resume' : 'Elsa_Nlang_Monsuy_Resume'
-    
-    // Try PDF first, fallback to HTML
-    const link = document.createElement('a')
-    link.href = pdfUrl
-    link.download = `${fileName}.pdf`
-    link.target = '_blank'
-    
-    // Add error handling for PDF
-    link.onerror = () => {
-      // If PDF fails, try HTML
-      window.open(htmlUrl, '_blank')
-    }
-    
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
   return (
     <Router>
       <Routes>
@@ -2336,10 +2344,15 @@ function App() {
         <Route path="/" element={
           <div className="min-h-screen bg-white">
             <PortfolioSwitcher activeProfile={activeProfile} setActiveProfile={setActiveProfile} />
-            <Navigation activeSection={activeSection} setActiveSection={scrollToSection} currentProfile={activeProfile} />
+            <Navigation 
+              activeSection={activeSection} 
+              setActiveSection={scrollToSection} 
+              currentProfile={activeProfile} 
+              downloadResume={downloadResume} 
+            />
             
             <div id="about">
-              <AboutSection currentProfile={activeProfile} />
+              <AboutSection currentProfile={activeProfile} downloadResume={downloadResume} />
             </div>
             
             <div id="experience">
@@ -2351,7 +2364,7 @@ function App() {
             </div>
             
             <div id="contact">
-              <ContactSection currentProfile={activeProfile} />
+              <ContactSection currentProfile={activeProfile} downloadResume={downloadResume} />
             </div>
           </div>
         } />
