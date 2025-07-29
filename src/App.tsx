@@ -270,6 +270,63 @@ const projectData: Record<string, Project[]> = {
   ]
 }
 
+// Add academic and personal projects for Elsa
+const academicProjects: Record<string, Project[]> = {
+  wife: [
+    {
+      id: "senior-design-project",
+      title: "Manufacturing Process Optimization - Senior Design Project",
+      description: "Led team capstone project focused on optimizing manufacturing workflow efficiency using Lean principles and data analysis, achieving measurable improvements in theoretical production scenarios.",
+      category: "Academic Engineering Excellence",
+      technologies: ["Lean Manufacturing", "Process Analysis", "Data Collection", "CAD Design", "Team Leadership"],
+      impact: "🎓 Academic excellence • 👥 Team leadership • 📊 Process optimization • 🏆 Top project recognition",
+      highlights: [
+        "**Led cross-functional team of 4 engineering students** in comprehensive capstone project",
+        "**Applied Lean manufacturing principles** to identify and eliminate waste in production processes",
+        "**Conducted detailed time-motion studies** and statistical analysis of manufacturing workflows",
+        "**Designed improved process layout using CAD software** resulting in theoretical efficiency gains",
+        "**Presented findings to industry panel** receiving recognition for practical application potential"
+      ],
+      timeline: "2 semesters",
+      client: "UT Tyler Engineering Department"
+    },
+    {
+      id: "internship-quality-systems",
+      title: "Quality Systems Implementation Internship",
+      description: "Completed engineering internship focused on quality control systems and process improvement, gaining hands-on experience with industrial manufacturing environments.",
+      category: "Engineering Internship Experience",
+      technologies: ["Quality Control", "ISO Standards", "Statistical Process Control", "Measurement Systems", "Documentation"],
+      impact: "🔧 Hands-on experience • 📋 Quality systems knowledge • 📈 Process improvement skills",
+      highlights: [
+        "**Implemented quality control procedures** following ISO standards and best practices",
+        "**Assisted in statistical process control** data collection and analysis initiatives",
+        "**Learned precision measurement techniques** using industrial calibration equipment",
+        "**Developed technical documentation** for quality assurance procedures",
+        "**Collaborated with experienced engineers** gaining valuable mentorship and industry insights"
+      ],
+      timeline: "Summer internship",
+      client: "Manufacturing Partner Company"
+    },
+    {
+      id: "engineering-competition",
+      title: "Regional Engineering Design Competition",
+      description: "Participated in regional engineering competition designing cost-effective solutions for real-world manufacturing challenges, demonstrating innovative problem-solving abilities.",
+      category: "Engineering Competition & Innovation",
+      technologies: ["Engineering Design", "Cost Analysis", "Project Management", "Presentation Skills", "Innovation"],
+      impact: "🏆 Competitive recognition • 💡 Innovation skills • 🎯 Problem-solving excellence",
+      highlights: [
+        "**Designed innovative engineering solution** for complex manufacturing challenge within budget constraints",
+        "**Conducted comprehensive cost-benefit analysis** comparing multiple design alternatives",
+        "**Managed project timeline and deliverables** ensuring competition deadline compliance",
+        "**Presented technical solution to panel of industry experts** demonstrating communication skills",
+        "**Achieved regional recognition** for creative approach to engineering problem-solving"
+      ],
+      timeline: "6 months",
+      client: "Texas Engineering Society"
+    }
+  ]
+}
+
 // Portfolio Data
 const profiles: Record<string, Profile> = {
   david: {
@@ -447,29 +504,34 @@ const allSkills: Record<string, Skill[]> = {
   ],
   wife: [
     {
-      category: "Education & Credentials",
+      category: "Education & Engineering Foundation",
       icon: <AwardIcon className="w-6 h-6" />,
-      items: ["B.S. Mechanical Engineering - University of Texas at Tyler", "Lean Six Sigma Green Belt Certified", "Quality Control Specialist Certification", "Trilingual: English, Spanish, French", "Engineering Problem Solving", "Technical Analysis & Reporting"]
+      items: ["B.S. Mechanical Engineering - University of Texas at Tyler", "Strong Engineering Fundamentals", "ABET-Accredited Program Graduate", "Academic Excellence & Dean's List Recognition", "Senior Design Project Leadership", "Engineering Competition Participation"]
+    },
+    {
+      category: "Fresh Engineering Perspective",
+      icon: <Lightbulb className="w-6 h-6" />,
+      items: ["Latest Engineering Technologies & Methods", "Modern CAD Software Proficiency", "Current Industry Standards Knowledge", "Innovative Problem-Solving Approaches", "Rapid Learning & Adaptation", "Digital-Native Technical Skills"]
     },
     {
       category: "CAD & Design Software",
       icon: <Wrench className="w-6 h-6" />,
-      items: ["AutoCAD", "Autodesk Inventor", "SolidWorks", "Technical Drawings", "Assembly Documentation", "Conceptual Design"]
+      items: ["AutoCAD", "Autodesk Inventor", "SolidWorks", "Technical Drawings", "Assembly Documentation", "3D Modeling & Visualization"]
     },
     {
-      category: "Project Management",
-      icon: <Users className="w-6 h-6" />,
-      items: ["MS Project", "Project Specifications", "Budget Management", "Schedule Coordination", "Stakeholder Communication", "Continuous Improvement"]
-    },
-    {
-      category: "Quality Control & Manufacturing",
+      category: "Quality & Process Excellence",
       icon: <Target className="w-6 h-6" />,
-      items: ["Quality Inspections", "Dimensional Inspections", "First Article Inspection", "Tool Calibration", "ERP Systems", "Lean Six Sigma"]
+      items: ["Lean Six Sigma Green Belt", "Quality Control Systems", "Statistical Process Control", "ISO Standards Knowledge", "Continuous Improvement", "Root Cause Analysis"]
     },
     {
-      category: "Technical Skills",
-      icon: <Zap className="w-6 h-6" />,
-      items: ["Engineering Calculations", "Data Analysis", "Technical Reports", "Specifications", "Problem Solving", "Troubleshooting"]
+      category: "Professional Development",
+      icon: <Users className="w-6 h-6" />,
+      items: ["Project Management", "Technical Communication", "Team Collaboration", "Cross-Functional Coordination", "Mentorship Receptiveness", "Professional Growth Mindset"]
+    },
+    {
+      category: "Multilingual & Communication",
+      icon: <Globe className="w-6 h-6" />,
+      items: ["English (Fluent)", "Spanish (Native)", "French (Conversational)", "Technical Documentation", "Client Communication", "International Perspective"]
     }
   ]
 }
@@ -1807,6 +1869,95 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
               </div>
             </motion.div>
           )}
+
+          {/* New Graduate Value Proposition for Elsa */}
+          {currentProfile === 'wife' && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-16 bg-white/30 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Fresh Engineering Excellence</h3>
+                <p className="text-gray-700">The Strategic Advantage of Hiring a New Graduate Engineer</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <Lightbulb className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Latest Engineering Knowledge</h4>
+                      <p className="text-gray-700 text-sm">Recent UT Tyler graduate with current industry standards, modern methodologies, and cutting-edge engineering practices</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">High Growth Potential</h4>
+                      <p className="text-gray-700 text-sm">Eager to learn, adapt quickly, and grow with your organization - perfect for long-term engineering team development</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <Globe className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Trilingual Advantage</h4>
+                      <p className="text-gray-700 text-sm">Native Spanish, fluent English, conversational French - valuable for international projects and diverse teams</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <Target className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Proven Quality Focus</h4>
+                      <p className="text-gray-700 text-sm">Lean Six Sigma certified with hands-on experience in quality control and process improvement methodologies</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <Users className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Fresh Perspective</h4>
+                      <p className="text-gray-700 text-sm">Brings innovative thinking and modern approaches to traditional engineering challenges - no outdated habits to unlearn</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <Zap className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Digital Native Skills</h4>
+                      <p className="text-gray-700 text-sm">Advanced proficiency with modern CAD software, digital collaboration tools, and emerging engineering technologies</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-6 bg-emerald-50 rounded-xl border border-emerald-200">
+                <h4 className="font-bold text-emerald-800 mb-2">Investment in Your Future</h4>
+                <p className="text-emerald-700 text-sm">
+                  Hiring a talented new graduate like Elsa means investing in someone who will grow with your company, 
+                  contribute fresh ideas, and develop into a cornerstone of your engineering team for years to come.
+                </p>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
@@ -2536,7 +2687,9 @@ function CompanyDetailPage() {
 
 // Projects Section
 function ProjectsSection({ currentProfile }: { currentProfile: string }) {
-  const projects = projectData[currentProfile] || []
+  const professionalProjects = projectData[currentProfile] || []
+  const academicProjectsForProfile = academicProjects[currentProfile] || []
+  const allProjects = [...professionalProjects, ...academicProjectsForProfile]
   
   const profileColors = {
     david: {
@@ -2563,18 +2716,18 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured Projects
+            {currentProfile === 'david' ? 'Featured Projects' : 'Engineering Projects & Achievements'}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {currentProfile === 'david' 
               ? "Innovative mechanical design solutions that drive efficiency and deliver measurable results across industries."
-              : "Quality-focused engineering projects that optimize processes and enhance manufacturing excellence."
+              : "A comprehensive showcase of engineering excellence spanning academic achievements, professional experience, and innovative problem-solving capabilities."
             }
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {allProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -2665,12 +2818,15 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
         >
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Discuss Your Next Project?
+              {currentProfile === 'david' 
+                ? "Ready to Discuss Your Next Project?"
+                : "Ready to Contribute Fresh Engineering Perspective?"
+              }
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               {currentProfile === 'david' 
                 ? "Let's collaborate on innovative mechanical design solutions that drive efficiency and exceed expectations."
-                : "I'm excited to bring my quality engineering expertise to your manufacturing and process improvement initiatives."
+                : "I'm excited to bring my UT Tyler engineering education, fresh perspective, and proven ability to learn quickly to your engineering team."
               }
             </p>
             <button className={`inline-flex items-center px-8 py-3 bg-gradient-to-r from-${colors.accent} to-${colors.secondary} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-200`}>
