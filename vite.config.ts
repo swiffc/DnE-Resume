@@ -13,6 +13,5 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true
-  },
-  base: '/DesignPortfolio/' // Add this for GitHub Pages
+  }
 }) 
