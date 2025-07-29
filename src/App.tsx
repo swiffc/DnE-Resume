@@ -1518,6 +1518,18 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
 
   return (
     <section className={`section-padding bg-gradient-to-br ${profileGradients[currentProfile as keyof typeof profileGradients]} relative overflow-hidden`}>
+      {/* Industrial Background for David */}
+      {currentProfile === 'david' && (
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{
+            backgroundImage: 'url("/profile-background.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+      )}
       <div className="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -1564,19 +1576,74 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
             </div>
           </div>
 
-          <div className="flex justify-center gap-4">
-            <button className={`inline-flex items-center px-6 py-3 text-base font-medium text-white border border-transparent rounded-lg shadow-sm transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].primary}`}>
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Get in Touch
-            </button>
-            <button 
-              onClick={() => downloadResume(currentProfile)}
-              className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-12"
+          >
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <button className={`inline-flex items-center px-8 py-4 rounded-lg font-semibold transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].primary}`}>
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Get in Touch
+              </button>
+              <button 
+                onClick={() => downloadResume(currentProfile)}
+                className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Industrial Expertise Showcase for David */}
+          {currentProfile === 'david' && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-16 bg-white/30 backdrop-blur-md rounded-2xl p-8 border border-white/20"
             >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </button>
-          </div>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Industrial Equipment Expertise</h3>
+                <p className="text-gray-700">Specialized in Gas Compression & Process Equipment Design</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <img 
+                    src="/profile-background.jpg" 
+                    alt="Industrial Gas Compression Equipment" 
+                    className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Gas Compression Systems</h4>
+                      <p className="text-gray-700 text-sm">Expert design of CCSC-H models and wide gas compression equipment for industrial applications</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Process Equipment Design</h4>
+                      <p className="text-gray-700 text-sm">15+ years designing pressure vessels, heat exchangers, and process equipment for oil & gas</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">ASME Compliance</h4>
+                      <p className="text-gray-700 text-sm">Structural integrity validation for vessels up to 2,500 PSI with full regulatory compliance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
