@@ -200,6 +200,23 @@ const projectData: Record<string, Project[]> = {
   ],
   wife: [
     {
+      id: "ut-tyler-foundation",
+      title: "Engineering Excellence Through UT Tyler Education",
+      description: "Leveraged comprehensive mechanical engineering education from University of Texas at Tyler to build strong foundation in quality systems, manufacturing processes, and technical problem-solving.",
+      category: "Educational Foundation & Professional Development",
+      technologies: ["Mechanical Engineering Principles", "Quality Systems", "Manufacturing Processes", "Technical Analysis", "Problem Solving"],
+      impact: "🎓 Strong engineering foundation • 📚 Comprehensive technical knowledge • 🔧 Practical application skills",
+      highlights: [
+        "**Completed rigorous mechanical engineering curriculum** at respected Texas engineering program",
+        "**Mastered fundamental engineering principles** in thermodynamics, materials science, and manufacturing",
+        "**Developed strong analytical and problem-solving skills** applicable across quality and manufacturing roles",
+        "**Built solid foundation in quality control systems** enabling immediate professional contribution",
+        "**Gained comprehensive understanding of manufacturing processes** supporting continuous improvement initiatives"
+      ],
+      timeline: "4 years",
+      client: "University of Texas at Tyler"
+    },
+    {
       id: "quality-excellence-program",
       title: "Comprehensive Quality Excellence Program",
       description: "Developed and implemented comprehensive testing protocols and quality assurance systems that significantly improved product reliability while reducing warranty-related costs.",
@@ -257,23 +274,23 @@ const projectData: Record<string, Project[]> = {
 const profiles: Record<string, Profile> = {
   david: {
     name: "David Cornealius",
-    title: "Mechanical Designer",
+    title: "Senior Mechanical Designer",
     email: "DavidCornealius@gmail.com",
     phone: "832-584-1634",
     location: "Houston, TX",
-    summary: "Mechanical Designer with over 15 years of experience in process equipment design, P&ID development, and cross-discipline engineering for oil, gas, and petrochemical industries. Expert in SolidWorks, Autodesk Inventor, and AutoCAD with strong foundation for AVEVA/Intelligent P&ID systems.",
+    summary: "Innovative and detail-oriented Mechanical Design Engineer with over 15 years of experience in the design and development of mechanical systems. Proven track record in leading projects from concept through to production, with a strong focus on sustainability and efficiency. Seeking to leverage expertise in CAD software and project management to contribute to cutting-edge projects.",
     avatar: "DC",
-    profileImage: "/david-profile.jpg"
+    profileImage: "/david-profile.jpg",
   },
   wife: {
     name: "Elsa Nlang Monsuy",
-    title: "Mechanical Engineer",
-    email: "elsamonsuy@yahoo.com",
+    title: "Mechanical Engineer | UT Tyler Graduate",
+    email: "elsamonsuy@yahoo.com", 
     phone: "(713) 820-2968",
     location: "Houston, TX",
-    summary: "Motivated Mechanical Engineer with experience in Lean Six Sigma processes, project design, manufacturing, quality control, production, and project management. Highly motivated and dynamic professional with strong communication skills.",
+    summary: "Motivated Mechanical Engineer and University of Texas at Tyler graduate with expertise in Lean Six Sigma processes, project design, manufacturing, quality control, and project management. Trilingual professional with strong analytical and communication skills, seeking to contribute technical excellence in process improvement and quality assurance.",
     avatar: "EN",
-    profileImage: "/elsa-profile.jpg"
+    profileImage: "/elsa-profile.jpg",
   }
 }
 
@@ -367,7 +384,7 @@ const allExperiences: Record<string, Experience[]> = {
         "🔍 **Conducted precision testing** on **hundreds of electronic systems**, **maintaining exceptional accuracy rates** and **identifying critical issues** before production release",
         "🤝 **Collaborated effectively with engineering teams** to **resolve numerous technical issues**, **reducing product defect rates** and **accelerating time-to-market**",
         "📋 **Created detailed documentation systems** that **improved compliance audit performance** and **streamlined quality assurance processes**",
-        "⚡ **Implemented automated testing procedures** that **increased testing efficiency substantially** while **maintaining rigorous quality standards**"
+        "🎓 **Applied UT Tyler mechanical engineering principles** to **implement automated testing procedures** that **increased testing efficiency substantially** while **maintaining rigorous quality standards**"
       ],
       technologies: ["Electronic Testing", "Quality Assurance", "Documentation Systems", "Process Improvement", "Technical Analysis"]
     },
@@ -430,6 +447,11 @@ const allSkills: Record<string, Skill[]> = {
   ],
   wife: [
     {
+      category: "Education & Credentials",
+      icon: <AwardIcon className="w-6 h-6" />,
+      items: ["B.S. Mechanical Engineering - University of Texas at Tyler", "Lean Six Sigma Green Belt Certified", "Quality Control Specialist Certification", "Trilingual: English, Spanish, French", "Engineering Problem Solving", "Technical Analysis & Reporting"]
+    },
+    {
       category: "CAD & Design Software",
       icon: <Wrench className="w-6 h-6" />,
       items: ["AutoCAD", "Autodesk Inventor", "SolidWorks", "Technical Drawings", "Assembly Documentation", "Conceptual Design"]
@@ -448,11 +470,6 @@ const allSkills: Record<string, Skill[]> = {
       category: "Technical Skills",
       icon: <Zap className="w-6 h-6" />,
       items: ["Engineering Calculations", "Data Analysis", "Technical Reports", "Specifications", "Problem Solving", "Troubleshooting"]
-    },
-    {
-      category: "Languages & Communication",
-      icon: <Calendar className="w-6 h-6" />,
-      items: ["Trilingual: English, Spanish, French", "Technical Documentation", "Client Communication", "Team Collaboration", "Cross-cultural Communication"]
     }
   ]
 }
