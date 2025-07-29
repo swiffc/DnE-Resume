@@ -200,6 +200,24 @@ const projectData: Record<string, Project[]> = {
   ],
   wife: [
     {
+      id: "international-construction",
+      title: "International Construction Project Management",
+      description: "Led complex construction projects in West Africa, managing multi-million dollar budgets and coordinating international teams across different time zones and cultural backgrounds.",
+      category: "International Project Management",
+      technologies: ["MS Project", "SolidWorks", "Project Management", "Budget Management", "Cross-Cultural Leadership"],
+      impact: "Successfully delivered $1M+ projects on time and within budget • International team coordination • Risk mitigation excellence",
+      highlights: [
+        "Managed construction projects exceeding $1M in challenging West African environments",
+        "Coordinated cross-cultural teams of contractors and engineers across multiple time zones",
+        "Developed comprehensive project specifications and conceptual designs using advanced software",
+        "Implemented continuous improvement initiatives resulting in enhanced operational efficiency",
+        "Created strategic mitigation plans preventing potential delays and cost overruns",
+        "Maintained excellent project delivery record while ensuring safety and quality standards"
+      ],
+      timeline: "2.5 years (2019-2021)",
+      client: "Diamonds Blocks Services - International Operations"
+    },
+    {
       id: "ut-tyler-foundation",
       title: "Engineering Excellence Through UT Tyler Education",
       description: "Leveraged comprehensive mechanical engineering education from University of Texas at Tyler to build strong foundation in quality systems, manufacturing processes, and technical problem-solving.",
@@ -217,21 +235,22 @@ const projectData: Record<string, Project[]> = {
       client: "University of Texas at Tyler"
     },
     {
-      id: "quality-excellence-program",
-      title: "Comprehensive Quality Excellence Program",
-      description: "Developed and implemented comprehensive testing protocols and quality assurance systems that significantly improved product reliability while reducing warranty-related costs.",
-      category: "Quality Engineering Leadership",
-      technologies: ["Electronic Testing", "Quality Protocols", "Process Improvement", "Documentation Systems"],
-      impact: "Notable reliability improvements • Reduced warranty costs • Exceptional testing accuracy",
+      id: "quality-systems-optimization",
+      title: "Advanced Quality Control Systems Implementation",
+      description: "Developed and implemented comprehensive quality control protocols combining first article inspection techniques with statistical process control methodologies.",
+      category: "Quality Engineering & Process Improvement",
+      technologies: ["First Article Inspection", "Statistical Process Control", "Precision Measurement", "Quality Documentation", "Process Improvement"],
+      impact: "Enhanced product quality • Reduced defect rates • Improved inspection efficiency",
       highlights: [
-        "Significantly improved product reliability through comprehensive testing protocol development",
-        "Substantially reduced warranty-related costs through rigorous quality control measures",
-        "Maintained exceptional testing accuracy across extensive electronic system evaluations",
-        "Notably reduced product defect rates through collaborative engineering solutions",
-        "Accelerated time-to-market while maintaining stringent quality standards"
+        "Implemented advanced first article inspection procedures ensuring product consistency",
+        "Developed comprehensive quality documentation systems improving compliance performance",
+        "Conducted precision dimensional inspections using calibrated measuring instruments",
+        "Coordinated with material operations and planning teams optimizing production workflows",
+        "Established non-conforming product identification and documentation protocols",
+        "Performed tool calibration audits ensuring measurement accuracy and reliability"
       ],
-      timeline: "2 years",
-      client: "Systel"
+      timeline: "1.5 years (2017-2018)",
+      client: "AmTex Machine Product"
     },
     {
       id: "lean-six-sigma-implementation",
@@ -341,11 +360,11 @@ const profiles: Record<string, Profile> = {
   },
   wife: {
     name: "Elsa Nlang Monsuy",
-    title: "Mechanical Engineer | UT Tyler Graduate",
+    title: "Mechanical Engineer | International Project Manager",
     email: "elsamonsuy@yahoo.com", 
     phone: "(713) 820-2968",
     location: "Houston, TX",
-    summary: "Motivated Mechanical Engineer and University of Texas at Tyler graduate with expertise in Lean Six Sigma processes, project design, manufacturing, quality control, and project management. Trilingual professional with strong analytical and communication skills, seeking to contribute technical excellence in process improvement and quality assurance.",
+    summary: "Dynamic Mechanical Engineer and 2019 University of Texas at Tyler graduate with exceptional international project management experience. Successfully managed $1M+ construction projects in West Africa while coordinating cross-cultural teams across multiple time zones. Proven expertise in Lean Six Sigma processes, advanced CAD design, quality control, and technical leadership. Trilingual professional combining fresh engineering perspective with hands-on experience in challenging international environments.",
     avatar: "EN",
     profileImage: "/elsa-profile.jpg",
   }
@@ -432,7 +451,7 @@ const allExperiences: Record<string, Experience[]> = {
       company: "Systel",
       position: "Test Engineering Technician",
       location: "Houston, TX", 
-      startDate: "2020",
+      startDate: "Aug 2021",
       endDate: "2022",
       logo: "🔬",
       color: "emerald",
@@ -447,39 +466,41 @@ const allExperiences: Record<string, Experience[]> = {
     },
     {
       id: "diamonds-blocks",
-      company: "Diamonds Blocks", 
-      position: "Production Engineering Support",
-      location: "Houston, TX",
-      startDate: "2018", 
-      endDate: "2020",
-      logo: "💎",
+      company: "Diamonds Blocks Services",
+      position: "Construction Project Manager",
+      location: "Malabo, Equatorial Guinea",
+      startDate: "May 2019",
+      endDate: "Aug 2021",
+      logo: "🏗️",
       color: "purple",
       description: [
-        "• Generated substantial annual savings by implementing Lean Six Sigma methodologies, reducing operational waste and optimizing production workflows",
-        "• Minimized equipment downtime significantly through proactive maintenance protocols and systematic troubleshooting approaches, increasing overall productivity",
-        "• Created effective technical reporting systems that improved management decision-making capabilities and enhanced project visibility across departments",
-        "• Streamlined production processes that increased operational throughput while maintaining quality standards and reducing operational costs",
-        "• Led comprehensive process analysis initiatives that identified operational bottlenecks and implemented practical solutions"
+        "• Successfully managed complex international construction projects in West Africa, delivering projects on time and within budget in challenging environments",
+        "• Generated comprehensive project specifications and conceptual designs using MS Project and SolidWorks, ensuring technical excellence and regulatory compliance",
+        "• Coordinated cross-cultural teams of contractors and engineers across multiple time zones, maintaining effective communication and project momentum",
+        "• Implemented continuous improvement initiatives for existing tooling and equipment, resulting in enhanced operational efficiency and reduced downtime",
+        "• Monitored project budgets exceeding $1M+ and complex schedules, providing detailed monthly updates to international stakeholders and executive leadership",
+        "• Developed and implemented strategic mitigation plans to prevent potential delays and cost overruns, maintaining excellent project delivery record"
       ],
-      technologies: ["Lean Six Sigma", "Process Optimization", "Equipment Maintenance", "Production Analysis", "Technical Reporting"]
+      technologies: ["MS Project", "SolidWorks", "Project Management", "International Construction", "Budget Management", "Stakeholder Coordination", "Risk Management"]
     },
     {
       id: "amtex-machine",
-      company: "AmTex Machine",
+      company: "AmTex Machine Product",
       position: "Quality Control Inspector", 
       location: "Houston, TX",
-      startDate: "2016",
-      endDate: "2018",
+      startDate: "Jan 2017",
+      endDate: "Feb 2018",
       logo: "🔍",
       color: "blue",
       description: [
-        "• Significantly reduced defect rates through comprehensive quality inspection protocols, substantially reducing rework and warranty costs",
-        "• Achieved exceptional dimensional accuracy using precision measuring instruments, exceeding industry standards and improving client satisfaction",
-        "• Collaborated effectively with production teams to implement corrective actions, preventing numerous non-conforming products from reaching customers",
-        "• Developed efficient quality documentation systems that reduced inspection time while improving detection accuracy",
-        "• Maintained excellent customer satisfaction with minimal complaints related to dimensional issues through rigorous quality control measures"
+        "• Performed comprehensive quality inspections ensuring consistency across all manufactured products, maintaining exceptional quality standards",
+        "• Conducted first article inspections and routine dimensional inspections using advanced precision measuring instruments and calibrated tools",
+        "• Executed weekly requirement evaluations in coordination with material operations and planning teams, optimizing production workflows",
+        "• Ensured non-conforming products were properly identified, documented, and processed according to quality protocols, preventing customer issues",
+        "• Maintained detailed monitoring and recording systems for product and production information, supporting continuous improvement initiatives",
+        "• Conducted online specification checks, dimensional inspections, and tool calibration audits, ensuring equipment accuracy and measurement reliability"
       ],
-      technologies: ["Precision Measurement", "Quality Control", "Dimensional Inspection", "Process Improvement", "Documentation Systems"]
+      technologies: ["Precision Measurement", "Quality Control", "Dimensional Inspection", "First Article Inspection", "Tool Calibration", "Documentation Systems", "Statistical Process Control"]
     }
   ]
 }
@@ -506,32 +527,32 @@ const allSkills: Record<string, Skill[]> = {
     {
       category: "Education & Engineering Foundation",
       icon: <AwardIcon className="w-6 h-6" />,
-      items: ["B.S. Mechanical Engineering - University of Texas at Tyler", "Strong Engineering Fundamentals", "ABET-Accredited Program Graduate", "Academic Excellence & Dean's List Recognition", "Senior Design Project Leadership", "Engineering Competition Participation"]
+      items: ["B.S. Mechanical Engineering - University of Texas at Tyler (2019)", "Strong Engineering Fundamentals", "ABET-Accredited Program Graduate", "Academic Excellence & Dean's List Recognition", "Senior Design Project Leadership", "Engineering Competition Participation"]
     },
     {
-      category: "Fresh Engineering Perspective",
-      icon: <Lightbulb className="w-6 h-6" />,
-      items: ["Latest Engineering Technologies & Methods", "Modern CAD Software Proficiency", "Current Industry Standards Knowledge", "Innovative Problem-Solving Approaches", "Rapid Learning & Adaptation", "Digital-Native Technical Skills"]
+      category: "Project Management & Leadership",
+      icon: <Users className="w-6 h-6" />,
+      items: ["International Construction Project Management", "Cross-Cultural Team Coordination", "Budget Management ($1M+ Projects)", "MS Project & Scheduling", "Stakeholder Communication", "Risk Assessment & Mitigation"]
     },
     {
       category: "CAD & Design Software",
       icon: <Wrench className="w-6 h-6" />,
-      items: ["AutoCAD", "Autodesk Inventor", "SolidWorks", "Technical Drawings", "Assembly Documentation", "3D Modeling & Visualization"]
+      items: ["SolidWorks (Advanced)", "AutoCAD", "MS Project", "Technical Drawings & Specifications", "3D Modeling & Assembly Design", "Engineering Documentation"]
     },
     {
       category: "Quality & Process Excellence",
       icon: <Target className="w-6 h-6" />,
-      items: ["Lean Six Sigma Green Belt", "Quality Control Systems", "Statistical Process Control", "ISO Standards Knowledge", "Continuous Improvement", "Root Cause Analysis"]
+      items: ["Lean Six Sigma Green Belt", "Quality Control Systems", "First Article Inspection", "Statistical Process Control", "ISO Standards Knowledge", "Dimensional Analysis & Calibration"]
     },
     {
-      category: "Professional Development",
-      icon: <Users className="w-6 h-6" />,
-      items: ["Project Management", "Technical Communication", "Team Collaboration", "Cross-Functional Coordination", "Mentorship Receptiveness", "Professional Growth Mindset"]
-    },
-    {
-      category: "Multilingual & Communication",
+      category: "International & Communication",
       icon: <Globe className="w-6 h-6" />,
-      items: ["English (Fluent)", "Spanish (Native)", "French (Conversational)", "Technical Documentation", "Client Communication", "International Perspective"]
+      items: ["Spanish (Native)", "English (Fluent)", "French (Conversational)", "International Project Experience", "Cross-Cultural Communication", "Technical Translation"]
+    },
+    {
+      category: "Fresh Engineering Perspective",
+      icon: <Lightbulb className="w-6 h-6" />,
+      items: ["Latest Engineering Technologies", "Modern Industry Standards", "Innovative Problem-Solving", "Rapid Learning & Adaptation", "Digital-Native Technical Skills", "Fresh Graduate Energy & Enthusiasm"]
     }
   ]
 }
