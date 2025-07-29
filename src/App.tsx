@@ -19,16 +19,21 @@ import {
   ChevronRight,
   Wrench,
   Zap,
-  Target,
-  Users,
-  ArrowLeftRight,
-  Home,
-  Building,
-  ChevronLeft,
-  ExternalLink,
+  Code2,
+  Database,
+  Globe,
+  CheckCircle,
   TrendingUp,
+  Users,
+  Award as AwardIcon,
+  Target,
+  Lightbulb,
   Settings,
-  CheckCircle
+  ChevronLeft,
+  Factory,
+  Building,
+  ArrowLeftRight,
+  ExternalLink
 } from 'lucide-react'
 import { clsx } from 'clsx'
 
