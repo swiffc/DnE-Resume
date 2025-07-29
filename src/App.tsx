@@ -33,7 +33,8 @@ import {
   Factory,
   Building,
   ArrowLeftRight,
-  ExternalLink
+  ExternalLink,
+  Shield
 } from 'lucide-react'
 import { clsx } from 'clsx'
 
@@ -1776,7 +1777,20 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
           }}
         />
       )}
+      
+      {/* Add background image for Elsa */}
+      {currentProfile === 'wife' && (
+        <>
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-10"
+            style={{ backgroundImage: 'url(/elsa-background.png)' }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-purple-500/20"></div>
+        </>
+      )}
+      
       <div className="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+      
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1976,6 +1990,116 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                   Hiring a talented new graduate like Elsa means investing in someone who will grow with your company, 
                   contribute fresh ideas, and develop into a cornerstone of your engineering team for years to come.
                 </p>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Rugged Systems Engineering Showcase for Elsa */}
+          {currentProfile === 'wife' && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-16 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 text-white"
+            >
+              {/* Faded Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-20"
+                style={{ backgroundImage: 'url(/elsa-background.png)' }}
+              ></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-gray-900/80 to-indigo-900/80"></div>
+              
+              <div className="relative z-10">
+                <div className="text-center mb-8">
+                  <h3 className="text-3xl font-bold mb-2">Rugged Systems Engineering Excellence</h3>
+                  <p className="text-gray-300 text-lg">How Mechanical Engineers Build Mission-Critical Systems</p>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="space-y-6">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <h4 className="text-xl font-bold text-purple-300 mb-3">Systel Systems Engineering</h4>
+                      <p className="text-gray-300 mb-4">
+                        At Systel, Elsa contributed to the engineering of rugged electronic systems designed for extreme environments and mission-critical applications.
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-400">
+                        <li className="flex items-start space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2"></div>
+                          <span>Electronic system testing and validation</span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2"></div>
+                          <span>Quality assurance for harsh environment applications</span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2"></div>
+                          <span>Comprehensive testing protocol development</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <h4 className="text-xl font-bold text-purple-300 mb-3">Mechanical Engineering Impact</h4>
+                      <p className="text-gray-300 text-sm">
+                        Mechanical engineers are essential in developing rugged systems, providing thermal management, 
+                        structural integrity, and environmental protection for sensitive electronic components.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-bold text-white mb-4">Engineering Contributions to Rugged Systems</h4>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <Settings className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-white">Thermal Management</h5>
+                          <p className="text-gray-400 text-sm">Designing heat dissipation systems for electronic components operating in extreme temperatures</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <Shield className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-white">Environmental Protection</h5>
+                          <p className="text-gray-400 text-sm">Creating robust enclosures that protect sensitive electronics from dust, moisture, and shock</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <Wrench className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-white">Structural Integrity</h5>
+                          <p className="text-gray-400 text-sm">Ensuring mechanical systems can withstand vibration, impact, and environmental stresses</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <CheckCircle className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-white">Quality Assurance</h5>
+                          <p className="text-gray-400 text-sm">Implementing rigorous testing protocols to validate system performance under extreme conditions</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <div className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+                    <Zap className="w-5 h-5 mr-2" />
+                    <span>Engineering Resilient Systems for Tomorrow</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}
