@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Cornealius - Mechanical Designer Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            font-size: 11pt;
+        }
+        
+        .resume {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+        
+        .title {
+            font-size: 14pt;
+            color: #6b7280;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 10pt;
+            color: #4b5563;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 14pt;
+            font-weight: 600;
+            color: #1e40af;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .company {
+            font-size: 11pt;
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        .duration {
+            font-size: 10pt;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .location {
+            font-size: 10pt;
+            color: #9ca3af;
+            font-style: italic;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .achievements li {
+            margin-bottom: 4px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .achievements li:before {
+            content: "▸";
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .skill-category h4 {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 6px;
+        }
+        
+        .skill-list {
+            font-size: 10pt;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        
+        .summary-text {
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #374151;
+            text-align: justify;
+        }
+        
+        @media print {
+            body { -webkit-print-color-adjust: exact; }
+            .resume { padding: 0.4in; }
+            .header { page-break-after: avoid; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <div class="name">David Cornealius</div>
+            <div class="title">Mechanical Designer</div>
+            <div class="contact">
+                <span>📧 DavidCornealius@gmail.com</span>
+                <span>📱 832-584-1634</span>
+                <span>📍 Houston, TX</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary-text">
+                Mechanical Designer with over 15 years of experience in process equipment design, P&ID development, and cross-discipline engineering for oil, gas, and petrochemical industries. Expert in SolidWorks, Autodesk Inventor, and AutoCAD with strong foundation for AVEVA/Intelligent P&ID systems. Proven track record of delivering complex projects with 99.8% design accuracy and achieving 15% efficiency improvements through innovative engineering solutions.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Mechanical Designer</div>
+                        <div class="company">Chart Industries (Hudson Products)</div>
+                    </div>
+                    <div>
+                        <div class="duration">Sep 2019 - Present</div>
+                        <div class="location">Beasley, TX</div>
+                    </div>
+                </div>
+                <ul class="achievements">
+                    <li>Design air-cooled heat exchangers including finned tube bundles, axial flow fans and supporting structures for over 60 LNG and petrochemical projects valued at $50M+ annually</li>
+                    <li>Create detailed 3D models and fabrication drawings for air-cooled heat exchanger components using SolidWorks and Autodesk Inventor with 99.8% design accuracy</li>
+                    <li>Collaborate extensively with thermal engineers using HTRI software and CFD analysis to optimize air-cooled heat exchanger performance, achieving 15% efficiency improvements</li>
+                    <li>Generate comprehensive design documentation including P&IDs, equipment specifications, BOMs, and fabrication drawings with 99.5% accuracy rate across 200+ drawings annually</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Mechanical Designer</div>
+                        <div class="company">Inova Geophysical</div>
+                    </div>
+                    <div>
+                        <div class="duration">Oct 2018 - Sep 2019</div>
+                        <div class="location">Sugar Land, TX</div>
+                    </div>
+                </div>
+                <ul class="achievements">
+                    <li>Designed Vibroseis seismic vehicle components, including hydraulic systems, chassis, and vibration mechanisms for harsh field environments with -40°F to 120°F operating range</li>
+                    <li>Created automated 3D assemblies using Inventor API scripts to streamline chassis and hydraulic component integration, reducing assembly time by 70% and saving 120 hours monthly</li>
+                    <li>Developed 2D drawings with ASME Y14.5 GD&T standards, facilitating precise manufacturing and assembly operations with zero tolerance stack-up issues</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Mechanical Designer</div>
+                        <div class="company">KBR</div>
+                    </div>
+                    <div>
+                        <div class="duration">May 2014 - Oct 2018</div>
+                        <div class="location">Houston, TX</div>
+                    </div>
+                </div>
+                <ul class="achievements">
+                    <li>Designed process equipment and piping systems for major petrochemical EPC projects valued at $500M+ total, including refineries and chemical processing facilities</li>
+                    <li>Collaborated extensively with process engineers to translate process requirements into detailed mechanical designs with full ASME compliance across 15+ major projects</li>
+                    <li>Executed PV Elite calculations and process equipment design validation ensuring structural integrity and safety standards for vessels up to 2,500 PSI operating pressure</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Mechanical Designer</div>
+                        <div class="company">Control Flow, Inc.</div>
+                    </div>
+                    <div>
+                        <div class="duration">Dec 2010 - May 2014</div>
+                        <div class="location">Houston, TX</div>
+                    </div>
+                </div>
+                <ul class="achievements">
+                    <li>Designed motion compensation systems for offshore drilling operations, including Drill String Compensators (DSC) operating at 3,500 PSI with 99.7% reliability rating</li>
+                    <li>Developed hydraulic cylinder assemblies for Production Riser Tensioner Modules (PRT®) capable of 1,500,000 lbs tension capacity for deepwater drilling platforms</li>
+                    <li>Created detailed designs for Ultimate Mo-Comp Cylinder Assemblies (UMCCA™) with integrated accumulators for North Sea operations in 6-meter sea states</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Design Software</h4>
+                    <div class="skill-list">SolidWorks, Autodesk Inventor, AutoCAD, HTRI, CFD Analysis, VBA Macros, PDM</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Engineering Standards</h4>
+                    <div class="skill-list">ASME Y14.5 GD&T, ASME Standards, API Standards, PV Elite, API 16F Standards</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Specializations</h4>
+                    <div class="skill-list">P&ID Development, Process Equipment Design, Air-Cooled Heat Exchangers, Hydraulic Systems</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Industries</h4>
+                    <div class="skill-list">Oil & Gas, Petrochemical, LNG Processing, Offshore Drilling, Seismic Equipment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

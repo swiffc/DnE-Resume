@@ -1393,9 +1393,8 @@ function Navigation({ activeSection, setActiveSection, currentProfile }: {
 
           {/* Resume Download & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <a 
-              href={currentProfile === 'david' ? '/resume.pdf' : '/elsa-resume.pdf'}
-              download
+            <button 
+              onClick={() => downloadResume(currentProfile)}
               className={`hidden md:flex items-center space-x-2 px-4 py-2 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
               currentProfile === 'david' 
                 ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
@@ -1403,7 +1402,7 @@ function Navigation({ activeSection, setActiveSection, currentProfile }: {
             }`}>
               <Download className="w-4 h-4" />
               <span>Resume</span>
-            </a>
+            </button>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1525,7 +1524,10 @@ function AboutSection({ currentProfile }: { currentProfile: string }) {
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get in Touch
               </button>
-              <button className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}>
+              <button 
+                onClick={() => downloadResume(currentProfile)}
+                className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}
+              >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resume
               </button>
@@ -1788,7 +1790,10 @@ function ContactSection({ currentProfile }: { currentProfile: string }) {
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </button>
-              <button className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors">
+              <button 
+                onClick={() => downloadResume(currentProfile)}
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+              >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resume
               </button>
@@ -2287,6 +2292,29 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' })
     }
     setActiveSection(sectionId)
+  }
+
+  // Resume download function with fallback
+  const downloadResume = (profile: string) => {
+    const pdfUrl = profile === 'david' ? '/david-resume.pdf' : '/elsa-resume.pdf'
+    const htmlUrl = profile === 'david' ? '/david-resume.html' : '/elsa-resume.html'
+    const fileName = profile === 'david' ? 'David_Cornealius_Resume' : 'Elsa_Nlang_Monsuy_Resume'
+    
+    // Try PDF first, fallback to HTML
+    const link = document.createElement('a')
+    link.href = pdfUrl
+    link.download = `${fileName}.pdf`
+    link.target = '_blank'
+    
+    // Add error handling for PDF
+    link.onerror = () => {
+      // If PDF fails, try HTML
+      window.open(htmlUrl, '_blank')
+    }
+    
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
