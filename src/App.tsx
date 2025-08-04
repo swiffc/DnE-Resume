@@ -454,16 +454,16 @@ const allExperiences: Record<string, Experience[]> = {
       location: "Houston, TX", 
       startDate: "Aug 2021",
       endDate: "2022",
-      logo: "🔬",
+      logo: "",
       color: "emerald",
       description: [
-        "• Significantly improved product reliability through comprehensive testing protocol development, reducing client warranty issues and enhancing customer satisfaction",
-        "• Conducted precision testing on hundreds of electronic systems, maintaining exceptional accuracy rates and identifying critical issues before production release",
-        "• Collaborated effectively with engineering teams to resolve numerous technical issues, reducing product defect rates and accelerating time-to-market",
-        "• Created detailed documentation systems that improved compliance audit performance and streamlined quality assurance processes",
-        "• Applied UT Tyler mechanical engineering principles to implement automated testing procedures that increased testing efficiency substantially while maintaining rigorous quality standards"
+        "• Applied mechanical engineering principles to develop comprehensive testing protocols for electro-mechanical systems, validating design specifications and identifying critical failure modes through systematic analysis",
+        "• Conducted precision mechanical and thermal testing on complex electronic assemblies, performing stress analysis and component validation to ensure design integrity and operational reliability",
+        "• Collaborated with design engineers to optimize mechanical interfaces and thermal management systems, reducing component failure rates through rigorous engineering analysis and root cause investigation",
+        "• Implemented automated testing procedures integrating mechanical measurement systems with electronic validation, improving testing accuracy while applying engineering fundamentals to complex technical challenges",
+        "• Created detailed engineering documentation and failure analysis reports, leveraging UT Tyler mechanical engineering education to resolve technical issues and improve product design specifications"
       ],
-      technologies: ["Electronic Testing", "Quality Assurance", "Documentation Systems", "Process Improvement", "Technical Analysis"]
+      technologies: ["Mechanical System Analysis", "Thermal Testing", "Stress Analysis", "Design Validation", "Engineering Documentation", "Failure Mode Analysis", "Technical Problem Solving"]
     },
     {
       id: "diamonds-blocks",
