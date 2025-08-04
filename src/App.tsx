@@ -450,7 +450,7 @@ const allExperiences: Record<string, Experience[]> = {
     {
       id: "systel",
       company: "Systel",
-      position: "Test Engineering Technician",
+      position: "Mechanical Engineer",
       location: "Houston, TX", 
       startDate: "Aug 2021",
       endDate: "Present",
