@@ -453,7 +453,7 @@ const allExperiences: Record<string, Experience[]> = {
       position: "Test Engineering Technician",
       location: "Houston, TX", 
       startDate: "Aug 2021",
-      endDate: "2022",
+      endDate: "Present",
       logo: "",
       color: "emerald",
       description: [
