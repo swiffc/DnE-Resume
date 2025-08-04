@@ -1519,27 +1519,45 @@ const companyDetails: Record<string, CompanyDetail> = {
   }
 }
 
-// Resume download function with fallback
-const downloadResume = (profile: string) => {
-  // Open HTML resume in new tab with print parameter
-  const htmlUrl = profile === 'david' ? '/david-resume.html?print=true' : '/elsa-resume.html?print=true'
-  
-  console.log(`Opening resume for ${profile}:`, htmlUrl)
+// Resume download functions
+const downloadDavidResume = () => {
+  const htmlUrl = '/david-resume.html?print=true'
+  console.log('Opening David\'s resume:', htmlUrl)
   
   try {
-    // Open in new tab - this will trigger auto-print due to the ?print=true parameter
     const newWindow = window.open(htmlUrl, '_blank')
-    
     if (!newWindow) {
-      // If popup blocked, fallback to direct navigation
       window.location.href = htmlUrl
     }
-    
-    console.log('Resume opened successfully')
+    console.log('David\'s resume opened successfully')
   } catch (error) {
-    console.error('Resume open failed:', error)
-    // Final fallback
+    console.error('David\'s resume open failed:', error)
     window.location.href = htmlUrl
+  }
+}
+
+const downloadElsaResume = () => {
+  const htmlUrl = '/Elsa_Monsuy_Resume.html?print=true'
+  console.log('Opening Elsa\'s resume:', htmlUrl)
+  
+  try {
+    const newWindow = window.open(htmlUrl, '_blank')
+    if (!newWindow) {
+      window.location.href = htmlUrl
+    }
+    console.log('Elsa\'s resume opened successfully')
+  } catch (error) {
+    console.error('Elsa\'s resume open failed:', error)
+    window.location.href = htmlUrl
+  }
+}
+
+// Legacy function for backward compatibility
+const downloadResume = (profile: string) => {
+  if (profile === 'david') {
+    downloadDavidResume()
+  } else {
+    downloadElsaResume()
   }
 }
 
