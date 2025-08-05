@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elsa Nlang Monsuy - Mechanical Engineer Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 8px;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.2;
+            font-size: 8pt;
+        }
+        
+        .resume {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 20px auto;
+            background: white;
+            display: flex;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            width: 35%;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            padding: 15px 12px;
+            position: relative;
+            min-height: 100%;
+        }
+        
+        .main-content {
+            width: 65%;
+            padding: 15px 15px;
+            background: white;
+            min-height: 100%;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.2);
+            margin: 0 auto 8px;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .name {
+            font-size: 16pt;
+            font-weight: 700;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .title {
+            font-size: 9pt;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            font-size: 8pt;
+        }
+        
+        .contact-icon {
+            width: 12px;
+            margin-right: 6px;
+            opacity: 0.8;
+        }
+        
+        .sidebar-section {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-title {
+            font-size: 9pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .skill-item {
+            margin-bottom: 8px;
+            font-size: 10pt;
+            line-height: 1.4;
+        }
+        
+        .skill-bullet {
+            color: rgba(255,255,255,0.7);
+            margin-right: 8px;
+        }
+        
+        .certification-item {
+            margin-bottom: 10px;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .cert-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .cert-org {
+            opacity: 0.8;
+            font-size: 9pt;
+        }
+        
+        .main-title {
+            font-size: 9pt;
+            font-weight: 600;
+            color: #7c3aed;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #7c3aed;
+            padding-bottom: 2px;
+        }
+        
+        .objective-text {
+            font-size: 8pt;
+            line-height: 1.2;
+            color: #555;
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+        
+        .section {
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-size: 9pt;
+            font-weight: 600;
+            color: #7c3aed;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #7c3aed;
+            padding-bottom: 2px;
+        }
+        
+        .experience-item {
+            margin-bottom: 6px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #7c3aed;
+            margin-bottom: 2px;
+        }
+        
+        .company {
+            font-size: 10pt;
+            color: #7c3aed;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .duration {
+            font-size: 9pt;
+            color: #777;
+            font-style: italic;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 6px;
+        }
+        
+        .achievements li {
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+            font-size: 9pt;
+            line-height: 1.4;
+            text-align: justify;
+        }
+        
+        .achievements li:before {
+            content: "•";
+            color: #7c3aed;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #7c3aed;
+            margin-bottom: 2px;
+        }
+        
+        .school {
+            font-size: 9pt;
+            color: #7c3aed;
+            margin-bottom: 2px;
+        }
+        
+        .edu-date {
+            font-size: 9pt;
+            color: #777;
+            font-style: italic;
+        }
+        
+        @media print {
+            body { 
+                -webkit-print-color-adjust: exact;
+                background: white;
+                margin: 0;
+                padding: 0;
+                font-size: 7pt;
+                line-height: 1.1;
+            }
+            .resume { 
+                margin: 0;
+                box-shadow: none;
+                max-width: none;
+                min-height: auto;
+                height: auto;
+                page-break-after: auto;
+                transform: scale(0.75);
+                transform-origin: top left;
+                width: 133.33%;
+            }
+            .sidebar {
+                page-break-inside: avoid;
+                min-height: auto;
+                padding: 8px 6px;
+            }
+            .main-content {
+                page-break-inside: auto;
+                min-height: auto;
+                padding: 8px 8px;
+            }
+            .experience-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 3px;
+            }
+            .section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 4px;
+            }
+            .achievements li {
+                margin-bottom: 1px;
+                font-size: 7pt;
+                line-height: 1.1;
+            }
+            .print-button { display: none; }
+            
+            /* Ensure content flows to next page when needed */
+            @page {
+                margin: 0.3in;
+                size: letter;
+            }
+        }
+    </style>
+    <script>
+        function printResume() {
+            window.print();
+        }
+        
+        // Auto-print when accessed via download
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('print') === 'true') {
+                setTimeout(printResume, 500);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 10px; background: #f0f0f0; print: none;" class="print-button">
+        <button onclick="printResume()" style="background: #7c3aed; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 14px;">
+            🖨️ Print/Save as PDF
+        </button>
+        <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Use your browser's print function to save as PDF</p>
+    </div>
+    
+    <div class="resume">
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-pic">
+                    <img src="/elsa-profile.jpg" alt="Elsa Nlang Monsuy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div class="name">Mechanical<br>Engineer</div>
+                <div class="title">Motivated Mechanical Engineer with Experience in<br>Lean Six Sigma, Manufacturing & Quality Control.</div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>(713) 820-2968</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>elsamonsuy@yahoo.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🔗</span>
+                    <span>LinkedIn</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Technical Skills</div>
+                <div class="skill-item">
+                    <span class="skill-bullet">•</span>CAD Software (SolidWorks, AutoCAD, MS Project)
+                </div>
+
+
+                <div class="skill-item">
+                    <span class="skill-bullet">•</span>Lean Six Sigma Methodologies
+                </div>
+                <div class="skill-item">
+                    <span class="skill-bullet">•</span>Quality Control & First Article Inspection
+                </div>
+                <div class="skill-item">
+                    <span class="skill-bullet">•</span>Cross-Cultural Team Leadership
+                </div>
+                <div class="skill-item">
+                    <span class="skill-bullet">•</span>Budget Management & Risk Mitigation
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Education</div>
+                <div class="certification-item">
+                    <div class="cert-name">B.S. Mechanical Engineering</div>
+                    <div class="cert-org">University of Texas at Tyler</div>
+                    <div class="cert-org">Tyler, TX • 2014-2019</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Languages</div>
+                <div class="certification-item">
+                    <div class="cert-name">English (Fluent)</div>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-name">Spanish (Native)</div>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-name">French (Conversational)</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Certifications</div>
+                <div class="certification-item">
+                    <div class="cert-name">Six Sigma Green Belt</div>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-name">Quality Control Specialist</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="profile-section">
+                <div class="name" style="color: #7c3aed; text-align: left; font-size: 18pt; margin-bottom: 5px;">ELSA NLANG MONSUY</div>
+                <div style="color: #7c3aed; font-size: 11pt; font-weight: 500; margin-bottom: 15px;">
+                    Mechanical Engineer • University of Texas at Tyler Graduate
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="main-title">Objective</div>
+                <div class="objective-text">
+                    Passionate Mechanical Engineer who thrives on solving complex challenges and bringing innovative ideas to life. As a proud 2019 UT Tyler graduate, I've had the incredible opportunity to manage multi-million dollar construction projects across West Africa, where I discovered my love for leading diverse, international teams. I'm energized by the intersection of technical precision and creative problem-solving – whether I'm optimizing manufacturing processes with Lean Six Sigma or designing solutions in CAD. Being trilingual has opened doors to meaningful collaborations across cultures, and I bring both fresh engineering insights and real-world grit to every project I tackle.
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Professional Experience</div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <img src="systel-logo.svg" alt="Systel" style="height: 20px; width: auto; margin-right: 8px; vertical-align: middle;">
+                            Mechanical Engineer at Systel, Houston, TX — 2020 - Present
+                        </div>
+                    </div>
+                    <ul class="achievements">
+                        <li>I love diving deep into electro-mechanical systems, developing testing protocols that really validate what these complex designs can do – it's like being a detective, finding potential failure modes before they become real problems</li>
+                        <li>There's something incredibly satisfying about conducting precision testing on electronic assemblies, using stress analysis to ensure everything works perfectly under real-world conditions</li>
+                        <li>I thrive on collaborating with our design team to make mechanical interfaces work better – we've actually reduced component failures by working together to understand the root causes and engineer better solutions</li>
+                        <li>I've been excited to implement automated testing procedures that blend mechanical measurement with electronic validation – it's amazing how much more accurate our testing has become</li>
+                        <li>Drawing on everything I learned at UT Tyler, I create detailed engineering documentation that actually helps solve problems and improve our product designs – it feels great to see my education making a real impact</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Manufacturing Engineering Intern at Diamond Blocks Services, Malabo, EG — May 2018 - Aug 2018</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>You know that feeling when you finally understand a complex puzzle? That's exactly what happened when I first started interpreting engineering drawings and blueprints – suddenly everything clicked and I could see how all the pieces fit together in the real manufacturing world</li>
+                        <li>I became obsessed with time studies (in the best way!) because watching how tiny tweaks could dramatically boost production capacity was like discovering superpowers – who knew a few seconds here and there could transform entire operations?</li>
+                        <li>Testing product sub-systems became my favorite detective work – I'd dig deep to validate reliability performance, and there's nothing quite like that 'aha!' moment when you catch something that could prevent future failures</li>
+                        <li>Working across maintenance, production quality, and safety departments was like getting a backstage pass to see how a manufacturing symphony really works – every department playing their part to create something amazing</li>
+                        <li>Being the intern who actually got to contribute ideas to improve our product development process? That was pure gold! Seeing my suggestions implemented and making a real difference gave me such a rush</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Quality Control Inspector at AmTex Machine Product, Houston, TX — Jan 2017 - Feb 2018</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>I took pride in performing thorough quality inspections, knowing that my attention to detail helped maintain the exceptional standards our customers expected from every product</li>
+                        <li>Working with precision measuring instruments became second nature – there's something deeply satisfying about conducting first article inspections and knowing everything meets exact specifications</li>
+                        <li>I enjoyed collaborating with material operations and planning teams during weekly evaluations, finding ways to optimize our production workflows and make everyone's job easier</li>
+                        <li>Being the person who caught non-conforming products before they reached customers felt like being a guardian of quality – I made sure everything was properly documented and processed</li>
+                        <li>From specification checks to tool calibration audits, I made sure our equipment stayed accurate and reliable – the foundation of everything we produced</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Science in Mechanical Engineering</div>
+                    <div class="school">University of Texas at Tyler, Tyler, TX</div>
+                    <div class="edu-date">2014 - 2019</div>
+                    <ul class="achievements" style="margin-top: 8px;">
+                        <li>ABET-accredited mechanical engineering program with comprehensive 5-year curriculum</li>
+                        <li>Relevant coursework: Thermodynamics, Materials Science, Manufacturing Processes, Quality Control, CAD Design</li>
+                        <li>Senior Design Project: Led team in manufacturing process optimization achieving theoretical 15% efficiency improvement</li>
+                        <li>Recent graduate with current engineering knowledge and modern methodologies</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Academic & Professional Achievements</div>
+                <ul class="achievements">
+                    <li><strong>Manufacturing Engineering Internship:</strong> Gained hands-on experience in West Africa interpreting engineering drawings, conducting time studies, and validating product reliability</li>
+                    <li><strong>Engineering Excellence:</strong> Completed rigorous ABET-accredited mechanical engineering program at University of Texas at Tyler (2019)</li>
+                    <li><strong>Quality Control Experience:</strong> Developed expertise in precision measurement, dimensional inspection, and quality assurance protocols</li>
+                    <li><strong>Current Professional Role:</strong> Mechanical Engineer at Systel since 2020, specializing in electro-mechanical system testing and validation</li>
+                    <li><strong>Trilingual Professional:</strong> Native Spanish, fluent English, conversational French - valuable for international collaboration</li>
+                    <li><strong>Technical Proficiency:</strong> Advanced skills in SolidWorks, AutoCAD, precision measurement systems, and mechanical system analysis</li>
+                    <li><strong>Process Improvement Focus:</strong> Experience in Lean methodologies, time studies, and continuous improvement initiatives</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Why Choose a New Graduate Engineer?</div>
+                <div style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 8px 0; font-size: 10pt; font-weight: 600;">Strategic Investment in Your Future</h4>
+                    <p style="margin: 0; font-size: 9pt; line-height: 1.4;">
+                        Fresh UT Tyler engineering graduate brings latest methodologies, rapid learning ability, and long-term growth potential to your engineering team.
+                    </p>
+                </div>
+                <ul class="achievements">
+                    <li><strong>Latest Knowledge:</strong> Current with modern engineering practices, industry standards, and emerging technologies</li>
+                    <li><strong>High Adaptability:</strong> Quick to learn company processes and eager to develop specialized expertise</li>
+                    <li><strong>Fresh Perspective:</strong> Innovative thinking without outdated practices - ideal for process improvement initiatives</li>
+                    <li><strong>Long-term Value:</strong> Grows with your company, building institutional knowledge and loyalty over time</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
