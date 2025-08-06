@@ -129,77 +129,7 @@ interface Project {
 }
 
 const projectData: Record<string, Project[]> = {
-  david: [
-    {
-      id: "gas-compression-system",
-      title: "High-Efficiency Gas Compression System Design",
-      description: "Led the design and optimization of wide-bore gas compression systems, delivering notable efficiency improvements that generated significant operational cost reductions for Chart Industries clients.",
-      category: "Process Equipment Innovation",
-      technologies: ["SolidWorks", "CFD Analysis", "HTRI", "PV Elite", "ASME Standards"],
-      impact: "Significant efficiency improvements • Substantial client cost savings • Reduced power consumption",
-      highlights: [
-        "Pioneered advanced cooling system design that substantially reduced compression power requirements",
-        "Implemented CFD-optimized flow patterns improving overall system performance", 
-        "Achieved full ASME compliance for high-pressure operation while exceeding safety margins",
-        "Delivered measurable operational cost reductions through innovative design optimization",
-        "Established new performance benchmarks for gas compression efficiency in wide-bore applications"
-      ],
-      timeline: "6 months",
-      client: "Chart Industries"
-    },
-    {
-      id: "offshore-drilling-system",
-      title: "Mission-Critical Offshore Motion Compensation System",
-      description: "Engineered hydraulic motion compensation systems for deepwater drilling operations, achieving exceptional reliability ratings that prevented costly operational downtime.",
-      category: "Offshore Engineering Excellence",
-      technologies: ["AutoCAD", "Hydraulic Analysis", "FEA", "API Standards", "Safety Systems"],
-      impact: "Exceptional reliability performance • High load capacity systems • Zero system failures",
-      highlights: [
-        "Achieved outstanding reliability ratings, significantly exceeding industry standards",
-        "Designed for extreme sea state operations with consistent performance reliability",
-        "Prevented substantial potential downtime costs through robust engineering design",
-        "Engineered high-capacity systems enabling expanded deepwater drilling capabilities",
-        "Significantly reduced maintenance requirements through integrated accumulator design"
-      ],
-      timeline: "8 months",
-      client: "Control Flow Inc."
-    },
-    {
-      id: "petrochemical-plant",
-      title: "Large-Scale Petrochemical EPC Project Leadership",
-      description: "Delivered complex process equipment and piping system designs for major petrochemical projects, maintaining exceptional safety and delivery records while optimizing project costs.",
-      category: "Industrial Project Management",
-      technologies: ["AVEVA P&ID", "PV Elite", "ASME Code", "Process Engineering", "Project Management"],
-      impact: "Major projects delivered successfully • Significant cost optimizations • Excellent delivery record",
-      highlights: [
-        "Successfully delivered major petrochemical EPC projects with excellent completion rates",
-        "Optimized piping system designs resulting in substantial project cost savings",
-        "Achieved full ASME compliance while streamlining design review processes",
-        "Maintained exemplary safety record across all design phases and implementations",
-        "Established company-wide design standards significantly improving quality outcomes"
-      ],
-      timeline: "4 years",
-      client: "KBR"
-    },
-    {
-      id: "seismic-vehicle-optimization",
-      title: "Seismic Vehicle Component Cost Optimization",
-      description: "Redesigned critical seismic vehicle components and implemented design automation, delivering substantial cost savings while improving product durability and manufacturing efficiency.",
-      category: "Product Innovation & Automation",
-      technologies: ["SolidWorks", "Design Automation", "Manufacturing Optimization", "Cost Engineering"],
-      impact: "Substantial cost savings achieved • Faster delivery cycles • Excellent quality outcomes",
-      highlights: [
-        "Delivered significant cost savings through innovative component redesign",
-        "Reduced manufacturing costs substantially while improving product durability",
-        "Revolutionized design automation notably shortening development cycles",
-        "Achieved excellent quality delivery performance with minimal defects",
-        "Negotiated meaningful cost reductions through strategic supplier partnerships"
-      ],
-      timeline: "11 months",
-      client: "Inova Geophysical"
-    }
-  ],
-  wife: [
+  elsa: [
     {
       id: "international-energy-operations",
       title: "International Energy Sector Operations - West Africa",
@@ -3017,7 +2947,7 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
 function App() {
   const [activeSection, setActiveSection] = useState('about')
   // Elsa's portfolio - hardcoded to Elsa's profile only
-  const activeProfile = 'wife'
+  const activeProfile = 'elsa'
 
   useEffect(() => {
     const handleScroll = () => {
