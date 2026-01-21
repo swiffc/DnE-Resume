@@ -230,13 +230,15 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🏭",
       color: "blue",
       description: [
-        "• Led design innovation for high-efficiency gas compression systems, delivering significant efficiency improvements that reduced client operational costs",
-        "• Spearheaded 30+ mechanical design projects using SolidWorks and AutoCAD, streamlining development workflows and accelerating project delivery timelines",
-        "• Drove cross-functional collaboration with process engineers, ensuring full ASME compliance while maintaining project schedules through systematic design reviews",
-        "• Implemented advanced CFD analysis techniques that optimized flow patterns, resulting in measurable reductions in compression power requirements",
-        "• Mentored team of 5 junior engineers, establishing design standards that improved team productivity and reduced design iterations significantly"
+        "• Deliver accurate 3D models and assemblies for cryogenic heat exchangers using SolidWorks, serving as mechanical focal point for engineer-to-order projects",
+        "• Own complete design lifecycle from concept through manufacturing release, ensuring all drawings meet company standards and customer specifications",
+        "• Generate comprehensive bills of materials and fabrication prints for equipment ranging from precision components to large-scale cryogenic systems",
+        "• Lead design review meetings with engineering, manufacturing, and quality teams, driving alignment and accelerating approval processes",
+        "• Provide daily shop floor support during production, resolving manufacturing challenges and reducing rework through proactive technical guidance",
+        "• Coordinate with purchasing and suppliers on geometry specifications and part identification, ensuring design integrity for purchased components",
+        "• Manage multiple concurrent projects within PLM environment, maintaining strict version control and documentation standards"
       ],
-      technologies: ["SolidWorks", "AutoCAD", "CFD Analysis", "HTRI", "PV Elite", "ASME Standards", "Project Leadership"]
+      technologies: ["SolidWorks", "PLM Systems", "Cryogenic Equipment", "ASME Standards", "Design for Manufacturing", "Technical Documentation"]
     },
     {
       id: "inova-geophysical",
@@ -248,17 +250,17 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🌊",
       color: "teal",
       description: [
-        "• Delivered substantial cost savings by redesigning seismic vehicle components, reducing manufacturing costs while significantly improving product durability",
-        "• Revolutionized design automation processes, shortening development cycles and enabling faster prototype delivery for critical client projects",
-        "• Created comprehensive technical documentation that streamlined manufacturing processes, reducing assembly time and minimizing assembly errors",
-        "• Established strategic supplier partnerships, optimizing material selection and ensuring compliance with industry standards while negotiating cost reductions",
-        "• Implemented rigorous quality control protocols that achieved excellent delivery performance with minimal defects during tenure"
+        "• Designed precision mechanical assemblies for seismic vibrator vehicles using SolidWorks, reducing manufacturing costs by 15% through DFM principles",
+        "• Developed Inventor API automation scripts that streamlined assembly integration and shortened design cycles",
+        "• Collaborated with purchasing, quality, and production teams to ensure seamless design-to-manufacturing transitions",
+        "• Created detailed GD&T documentation per ASME Y14.5 standards, achieving zero tolerance stack-up issues in production",
+        "• Optimized designs through regular shop floor engagement, improving production efficiency and resolving manufacturing challenges"
       ],
-      technologies: ["SolidWorks", "Manufacturing Optimization", "Cost Engineering", "Supplier Management", "Quality Control"]
+      technologies: ["SolidWorks", "Autodesk Inventor", "Inventor API", "ASME Y14.5 GD&T", "Design Automation", "Manufacturing Optimization"]
     },
     {
       id: "kbr",
-      company: "KBR",
+      company: "KBR (EPC Contractor)",
       position: "Senior Mechanical Designer",
       location: "Houston, TX",
       startDate: "May 2014",
@@ -266,13 +268,14 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "⚙️",
       color: "orange",
       description: [
-        "• Successfully delivered major petrochemical EPC projects valued at $500M+, maintaining excellent on-time delivery record while ensuring zero safety incidents",
-        "• Engineered complex process equipment with comprehensive PV Elite calculations, validating structural integrity for high-pressure vessels up to 2,500 PSI",
-        "• Translated process engineering requirements into detailed mechanical designs, achieving full ASME compliance and streamlining design review processes",
-        "• Optimized piping system designs that reduced material usage while improving flow efficiency, contributing to significant project cost savings",
-        "• Established design excellence standards that became company-wide best practices, improving overall project quality ratings"
+        "• Provided mechanical design services for major refinery and petrochemical clients on EPC projects valued at $500M+",
+        "• Designed process equipment and piping systems for client facilities including refineries, chemical plants, and LNG processing units",
+        "• Engineered high-pressure vessels up to 2,500 PSI using ASME code calculations and PV Elite validation for client specifications",
+        "• Translated client process requirements into detailed mechanical designs, coordinating between KBR engineering teams and client stakeholders",
+        "• Delivered on-time across multiple concurrent client projects while maintaining high accuracy standards",
+        "• Developed comprehensive BOMs and fabrication documentation supporting client facility construction and commissioning"
       ],
-      technologies: ["AVEVA P&ID", "PV Elite", "ASME Code", "Process Equipment Design", "Piping Systems", "Project Management"]
+      technologies: ["PV Elite", "ASME Code", "Process Equipment Design", "Piping Systems", "EPC Projects", "Client Coordination"]
     },
     {
       id: "control-flow",
@@ -284,13 +287,14 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🌊",
       color: "blue",
       description: [
-        "• Achieved exceptional reliability ratings in motion compensation systems for offshore drilling, significantly exceeding industry standards and preventing costly downtime",
-        "• Designed robust hydraulic systems capable of 1,500,000 lbs tension capacity, enabling safe deepwater operations in challenging 6-meter sea states",
-        "• Developed integrated accumulator systems for North Sea operations, ensuring reliable operation in extreme environmental conditions",
-        "• Streamlined hydraulic cylinder design processes, reducing manufacturing complexity while improving load capacity through innovative design solutions",
-        "• Implemented comprehensive safety-first design principles that maintained excellent safety record throughout tenure on high-risk offshore projects"
+        "• Designed motion compensation systems and drill string compensators for deepwater offshore drilling platforms including semi-submersibles and drillships",
+        "• Engineered hydraulic cylinder assemblies operating at 3,500 PSI for harsh marine environments with 6-meter sea state capability",
+        "• Created detailed manufacturing drawings and BOMs for production riser tensioner modules (PRT) and blowout preventers",
+        "• Supported equipment commissioning and field installations, providing technical documentation for offshore operations",
+        "• Achieved 99.7% equipment reliability rating through meticulous design validation and documentation",
+        "• Collaborated with manufacturing and suppliers to optimize designs for production efficiency and API 16F compliance"
       ],
-      technologies: ["AutoCAD", "Hydraulic Systems", "Motion Compensation", "Offshore Engineering", "Safety Systems", "FEA Analysis"]
+      technologies: ["AutoCAD", "Hydraulic Systems", "Motion Compensation", "Offshore Engineering", "API 16F", "Deepwater Equipment"]
     }
   ]
 }
@@ -597,13 +601,13 @@ const companyDetails: Record<string, CompanyDetail> = {
   },
   "kbr": {
     id: "kbr",
-    name: "KBR",
-    logo: "🏢", // This will be updated to show KBR branding
+    name: "KBR (EPC Contractor)",
+    logo: "🏢",
     industry: "Engineering, Procurement & Construction (EPC)",
     founded: "1901",
     headquarters: "Houston, Texas",
-    employees: "28,000+",
-    description: "KBR is a global provider of differentiated professional services and technologies across the asset and program lifecycle within the Government Solutions and Sustainable Technology Solutions markets. We deliver science, technology and engineering solutions to governments and companies around the world.",
+    employees: "34,000+",
+    description: "KBR is a leading global EPC contractor providing engineering, procurement, and construction services to major refinery and petrochemical clients worldwide. The company delivers turnkey solutions for refineries, chemical plants, LNG facilities, and other industrial projects, coordinating between engineering teams and client stakeholders throughout the project lifecycle.",
     businessFocus: [
       "Government Solutions & Defense",
       "Sustainable Technology Solutions",
@@ -717,13 +721,13 @@ const companyDetails: Record<string, CompanyDetail> = {
       { label: "Global Employees", value: "36,000+", icon: <Users className="w-5 h-5" /> },
       { label: "Countries Operations", value: "33", icon: <Building className="w-5 h-5" /> }
     ],
-    designRole: "Senior Mechanical Designer - Process Equipment",
+    designRole: "Senior Mechanical Designer - Client Projects",
     roleImpact: [
-      "Designed process equipment for $500M+ petrochemical EPC projects",
-      "Collaborated with process engineers on major refinery projects",
-      "Executed PV Elite calculations for high-pressure vessel design",
-      "Ensured full ASME compliance across 15+ major projects",
-      "Contributed to successful LNG and petrochemical facility developments"
+      "Provided mechanical design services for major refinery and petrochemical clients on $500M+ EPC projects",
+      "Designed process equipment and piping systems for client facilities including refineries, chemical plants, and LNG units",
+      "Engineered high-pressure vessels up to 2,500 PSI using ASME code calculations and PV Elite validation",
+      "Coordinated between KBR engineering teams and client stakeholders to translate requirements into detailed designs",
+      "Developed comprehensive BOMs and fabrication documentation supporting client facility construction"
     ],
     technicalFocus: [
       "Process Equipment Design",
