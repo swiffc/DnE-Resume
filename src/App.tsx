@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Menu, 
-  X, 
-  User, 
-  Briefcase, 
-  FolderOpen, 
-  Award, 
+import {
+  Menu,
+  X,
+  User,
+  Briefcase,
+  FolderOpen,
+  Award,
   MessageCircle,
   Download,
   Github,
@@ -139,7 +139,7 @@ const projectData: Record<string, Project[]> = {
       impact: "Significant efficiency improvements • Substantial client cost savings • Reduced power consumption",
       highlights: [
         "Pioneered advanced cooling system design that substantially reduced compression power requirements",
-        "Implemented CFD-optimized flow patterns improving overall system performance", 
+        "Implemented CFD-optimized flow patterns improving overall system performance",
         "Achieved full ASME compliance for high-pressure operation while exceeding safety margins",
         "Delivered measurable operational cost reductions through innovative design optimization",
         "Established new performance benchmarks for gas compression efficiency in wide-bore applications"
@@ -198,154 +198,9 @@ const projectData: Record<string, Project[]> = {
       timeline: "11 months",
       client: "Inova Geophysical"
     }
-  ],
-  wife: [
-    {
-      id: "international-construction",
-      title: "International Construction Project Management",
-      description: "Led complex construction projects in West Africa, managing multi-million dollar budgets and coordinating international teams across different time zones and cultural backgrounds.",
-      category: "International Project Management",
-      technologies: ["MS Project", "SolidWorks", "Project Management", "Budget Management", "Cross-Cultural Leadership"],
-      impact: "Successfully delivered $1M+ projects on time and within budget • International team coordination • Risk mitigation excellence",
-      highlights: [
-        "Managed construction projects exceeding $1M in challenging West African environments",
-        "Coordinated cross-cultural teams of contractors and engineers across multiple time zones",
-        "Developed comprehensive project specifications and conceptual designs using advanced software",
-        "Implemented continuous improvement initiatives resulting in enhanced operational efficiency",
-        "Created strategic mitigation plans preventing potential delays and cost overruns",
-        "Maintained excellent project delivery record while ensuring safety and quality standards"
-      ],
-      timeline: "2.5 years (2019-2021)",
-      client: "Diamonds Blocks Services - International Operations"
-    },
-    {
-      id: "ut-tyler-foundation",
-      title: "Engineering Excellence Through UT Tyler Education",
-      description: "Leveraged comprehensive mechanical engineering education from University of Texas at Tyler to build strong foundation in quality systems, manufacturing processes, and technical problem-solving.",
-      category: "Educational Foundation & Professional Development",
-      technologies: ["Mechanical Engineering Principles", "Quality Systems", "Manufacturing Processes", "Technical Analysis", "Problem Solving"],
-      impact: "Strong engineering foundation • Comprehensive technical knowledge • Practical application skills",
-      highlights: [
-        "Completed rigorous mechanical engineering curriculum at respected Texas engineering program",
-        "Mastered fundamental engineering principles in thermodynamics, materials science, and manufacturing",
-        "Developed strong analytical and problem-solving skills applicable across quality and manufacturing roles",
-        "Built solid foundation in quality control systems enabling immediate professional contribution",
-        "Gained comprehensive understanding of manufacturing processes supporting continuous improvement initiatives"
-      ],
-      timeline: "4 years",
-      client: "University of Texas at Tyler"
-    },
-    {
-      id: "quality-systems-optimization",
-      title: "Advanced Quality Control Systems Implementation",
-      description: "Developed and implemented comprehensive quality control protocols combining first article inspection techniques with statistical process control methodologies.",
-      category: "Quality Engineering & Process Improvement",
-      technologies: ["First Article Inspection", "Statistical Process Control", "Precision Measurement", "Quality Documentation", "Process Improvement"],
-      impact: "Enhanced product quality • Reduced defect rates • Improved inspection efficiency",
-      highlights: [
-        "Implemented advanced first article inspection procedures ensuring product consistency",
-        "Developed comprehensive quality documentation systems improving compliance performance",
-        "Conducted precision dimensional inspections using calibrated measuring instruments",
-        "Coordinated with material operations and planning teams optimizing production workflows",
-        "Established non-conforming product identification and documentation protocols",
-        "Performed tool calibration audits ensuring measurement accuracy and reliability"
-      ],
-      timeline: "1.5 years (2017-2018)",
-      client: "AmTex Machine Product"
-    },
-    {
-      id: "lean-six-sigma-implementation",
-      title: "Lean Six Sigma Manufacturing Optimization",
-      description: "Led comprehensive process optimization initiatives using Lean Six Sigma methodologies, generating meaningful cost savings and productivity improvements.",
-      category: "Process Excellence & Optimization",
-      technologies: ["Lean Six Sigma", "Process Analysis", "Equipment Optimization", "Production Management"],
-      impact: "Substantial annual savings • Increased productivity • Reduced operational waste",
-      highlights: [
-        "Generated significant annual savings through Lean Six Sigma implementation",
-        "Substantially reduced production waste optimizing manufacturing workflows",
-        "Notably increased overall productivity through equipment downtime reduction",
-        "Improved production efficiency substantially identifying and eliminating bottlenecks",
-        "Enhanced management decision-making capabilities through effective technical reporting systems"
-      ],
-      timeline: "2 years", 
-      client: "Diamonds Blocks"
-    },
-    {
-      id: "precision-quality-control",
-      title: "Precision Quality Control System Implementation",
-      description: "Established rigorous quality control protocols and precision measurement systems that eliminated defects and significantly improved customer satisfaction levels.",
-      category: "Quality Control Excellence",
-      technologies: ["Precision Measurement", "Quality Control", "Dimensional Analysis", "Process Improvement"],
-      impact: "Substantial defect reduction • Exceptional accuracy achieved • Excellent customer satisfaction",
-      highlights: [
-        "Significantly reduced defect rates resulting in substantial savings in rework costs",
-        "Achieved exceptional dimensional accuracy consistently exceeding industry standards",
-        "Prevented numerous non-conforming products from reaching customers",
-        "Maintained excellent customer satisfaction with minimal quality-related complaints",
-        "Improved detection accuracy substantially while reducing inspection time requirements"
-      ],
-      timeline: "2 years",
-      client: "AmTex Machine"
-    }
   ]
 }
 
-// Add academic and personal projects for Elsa
-const academicProjects: Record<string, Project[]> = {
-  wife: [
-    {
-      id: "senior-design-project",
-      title: "Manufacturing Process Optimization - Senior Design Project",
-      description: "Led team capstone project focused on optimizing manufacturing workflow efficiency using Lean principles and data analysis, achieving measurable improvements in theoretical production scenarios.",
-      category: "Academic Engineering Excellence",
-      technologies: ["Lean Manufacturing", "Process Analysis", "Data Collection", "CAD Design", "Team Leadership"],
-      impact: "Academic excellence demonstrated • Team leadership experience • Process optimization focus • Top project recognition",
-      highlights: [
-        "Led cross-functional team of 4 engineering students in comprehensive capstone project",
-        "Applied Lean manufacturing principles to identify and eliminate waste in production processes",
-        "Conducted detailed time-motion studies and statistical analysis of manufacturing workflows",
-        "Designed improved process layout using CAD software resulting in theoretical efficiency gains",
-        "Presented findings to industry panel receiving recognition for practical application potential"
-      ],
-      timeline: "2 semesters",
-      client: "UT Tyler Engineering Department"
-    },
-    {
-      id: "internship-quality-systems",
-      title: "Quality Systems Implementation Internship",
-      description: "Completed engineering internship focused on quality control systems and process improvement, gaining hands-on experience with industrial manufacturing environments.",
-      category: "Engineering Internship Experience",
-      technologies: ["Quality Control", "ISO Standards", "Statistical Process Control", "Measurement Systems", "Documentation"],
-      impact: "Hands-on industry experience • Quality systems knowledge • Process improvement skills",
-      highlights: [
-        "Implemented quality control procedures following ISO standards and best practices",
-        "Assisted in statistical process control data collection and analysis initiatives",
-        "Learned precision measurement techniques using industrial calibration equipment",
-        "Developed technical documentation for quality assurance procedures",
-        "Collaborated with experienced engineers gaining valuable mentorship and industry insights"
-      ],
-      timeline: "Summer internship",
-      client: "Manufacturing Partner Company"
-    },
-    {
-      id: "engineering-competition",
-      title: "Regional Engineering Design Competition",
-      description: "Participated in regional engineering competition designing cost-effective solutions for real-world manufacturing challenges, demonstrating innovative problem-solving abilities.",
-      category: "Engineering Competition & Innovation",
-      technologies: ["Engineering Design", "Cost Analysis", "Project Management", "Presentation Skills", "Innovation"],
-      impact: "Competitive recognition earned • Innovation skills demonstrated • Problem-solving excellence",
-      highlights: [
-        "Designed innovative engineering solution for complex manufacturing challenge within budget constraints",
-        "Conducted comprehensive cost-benefit analysis comparing multiple design alternatives",
-        "Managed project timeline and deliverables ensuring competition deadline compliance",
-        "Presented technical solution to panel of industry experts demonstrating communication skills",
-        "Achieved regional recognition for creative approach to engineering problem-solving"
-      ],
-      timeline: "6 months",
-      client: "Texas Engineering Society"
-    }
-  ]
-}
 
 // Portfolio Data
 const profiles: Record<string, Profile> = {
@@ -353,21 +208,11 @@ const profiles: Record<string, Profile> = {
     name: "David Cornealius",
     title: "Senior Mechanical Designer",
     email: "DavidCornealius@gmail.com",
-    phone: "832-584-1634",
+    phone: "281-756-7118",
     location: "Houston, TX",
     summary: "Innovative and detail-oriented Mechanical Design Engineer with over 15 years of experience in the design and development of mechanical systems. Proven track record in leading projects from concept through to production, with a strong focus on sustainability and efficiency. Seeking to leverage expertise in CAD software and project management to contribute to cutting-edge projects.",
     avatar: "DC",
     profileImage: "/david-profile.jpg",
-  },
-  wife: {
-    name: "Elsa Nlang Monsuy",
-    title: "Mechanical Engineer | International Project Manager",
-    email: "elsamonsuy@yahoo.com", 
-    phone: "(713) 820-2968",
-    location: "Houston, TX",
-    summary: "Dynamic Mechanical Engineer and 2019 University of Texas at Tyler graduate with exceptional international project management experience. Successfully managed $1M+ construction projects in West Africa while coordinating cross-cultural teams across multiple time zones. Proven expertise in Lean Six Sigma processes, advanced CAD design, quality control, and technical leadership. Trilingual professional combining fresh engineering perspective with hands-on experience in challenging international environments.",
-    avatar: "EN",
-    profileImage: "/elsa-profile.jpg",
   }
 }
 
@@ -392,12 +237,12 @@ const allExperiences: Record<string, Experience[]> = {
       technologies: ["SolidWorks", "AutoCAD", "CFD Analysis", "HTRI", "PV Elite", "ASME Standards", "Project Leadership"]
     },
     {
-      id: "inova-geophysical", 
+      id: "inova-geophysical",
       company: "Inova Geophysical",
       position: "Senior Mechanical Designer",
       location: "Sugar Land, TX",
       startDate: "Oct 2018",
-      endDate: "Sep 2019", 
+      endDate: "Sep 2019",
       logo: "🌊",
       color: "teal",
       description: [
@@ -411,7 +256,7 @@ const allExperiences: Record<string, Experience[]> = {
     },
     {
       id: "kbr",
-      company: "KBR", 
+      company: "KBR",
       position: "Senior Mechanical Designer",
       location: "Houston, TX",
       startDate: "May 2014",
@@ -430,7 +275,7 @@ const allExperiences: Record<string, Experience[]> = {
     {
       id: "control-flow",
       company: "Control Flow, Inc.",
-      position: "Mechanical Designer", 
+      position: "Mechanical Designer",
       location: "Houston, TX",
       startDate: "Dec 2010",
       endDate: "May 2014",
@@ -444,64 +289,6 @@ const allExperiences: Record<string, Experience[]> = {
         "• Implemented comprehensive safety-first design principles that maintained excellent safety record throughout tenure on high-risk offshore projects"
       ],
       technologies: ["AutoCAD", "Hydraulic Systems", "Motion Compensation", "Offshore Engineering", "Safety Systems", "FEA Analysis"]
-    }
-  ],
-  wife: [
-    {
-      id: "systel",
-      company: "Systel",
-      position: "Mechanical Engineer",
-      location: "Houston, TX", 
-      startDate: "Aug 2021",
-      endDate: "Present",
-      logo: "",
-      color: "emerald",
-      description: [
-        "• Applied mechanical engineering principles to develop comprehensive testing protocols for electro-mechanical systems, validating design specifications and identifying critical failure modes through systematic analysis",
-        "• Conducted precision mechanical and thermal testing on complex electronic assemblies, performing stress analysis and component validation to ensure design integrity and operational reliability",
-        "• Collaborated with design engineers to optimize mechanical interfaces and thermal management systems, reducing component failure rates through rigorous engineering analysis and root cause investigation",
-        "• Implemented automated testing procedures integrating mechanical measurement systems with electronic validation, improving testing accuracy while applying engineering fundamentals to complex technical challenges",
-        "• Created detailed engineering documentation and failure analysis reports, leveraging UT Tyler mechanical engineering education to resolve technical issues and improve product design specifications"
-      ],
-      technologies: ["Mechanical System Analysis", "Thermal Testing", "Stress Analysis", "Design Validation", "Engineering Documentation", "Failure Mode Analysis", "Technical Problem Solving"]
-    },
-    {
-      id: "diamonds-blocks",
-      company: "Diamonds Blocks Services",
-      position: "Construction Project Manager",
-      location: "Malabo, Equatorial Guinea",
-      startDate: "May 2019",
-      endDate: "Aug 2021",
-      logo: "🏗️",
-      color: "purple",
-      description: [
-        "• Successfully managed complex international construction projects in West Africa, delivering projects on time and within budget in challenging environments",
-        "• Generated comprehensive project specifications and conceptual designs using MS Project and SolidWorks, ensuring technical excellence and regulatory compliance",
-        "• Coordinated cross-cultural teams of contractors and engineers across multiple time zones, maintaining effective communication and project momentum",
-        "• Implemented continuous improvement initiatives for existing tooling and equipment, resulting in enhanced operational efficiency and reduced downtime",
-        "• Monitored project budgets exceeding $1M+ and complex schedules, providing detailed monthly updates to international stakeholders and executive leadership",
-        "• Developed and implemented strategic mitigation plans to prevent potential delays and cost overruns, maintaining excellent project delivery record"
-      ],
-      technologies: ["MS Project", "SolidWorks", "Project Management", "International Construction", "Budget Management", "Stakeholder Coordination", "Risk Management"]
-    },
-    {
-      id: "amtex-machine",
-      company: "AmTex Machine Product",
-      position: "Quality Control Inspector", 
-      location: "Houston, TX",
-      startDate: "Jan 2017",
-      endDate: "Feb 2018",
-      logo: "🔍",
-      color: "blue",
-      description: [
-        "• Performed comprehensive quality inspections ensuring consistency across all manufactured products, maintaining exceptional quality standards",
-        "• Conducted first article inspections and routine dimensional inspections using advanced precision measuring instruments and calibrated tools",
-        "• Executed weekly requirement evaluations in coordination with material operations and planning teams, optimizing production workflows",
-        "• Ensured non-conforming products were properly identified, documented, and processed according to quality protocols, preventing customer issues",
-        "• Maintained detailed monitoring and recording systems for product and production information, supporting continuous improvement initiatives",
-        "• Conducted online specification checks, dimensional inspections, and tool calibration audits, ensuring equipment accuracy and measurement reliability"
-      ],
-      technologies: ["Precision Measurement", "Quality Control", "Dimensional Inspection", "First Article Inspection", "Tool Calibration", "Documentation Systems", "Statistical Process Control"]
     }
   ]
 }
@@ -522,38 +309,6 @@ const allSkills: Record<string, Skill[]> = {
       category: "Standards & Codes",
       icon: <Target className="w-6 h-6" />,
       items: ["ASME Y14.5 GD&T", "API Standards", "ASME Code", "ISO Standards", "DNV-GL", "NORSOK"]
-    }
-  ],
-  wife: [
-    {
-      category: "Education & Engineering Foundation",
-      icon: <AwardIcon className="w-6 h-6" />,
-      items: ["B.S. Mechanical Engineering - University of Texas at Tyler (2019)", "Strong Engineering Fundamentals", "ABET-Accredited Program Graduate", "Academic Excellence & Dean's List Recognition", "Senior Design Project Leadership", "Engineering Competition Participation"]
-    },
-    {
-      category: "Project Management & Leadership",
-      icon: <Users className="w-6 h-6" />,
-      items: ["International Construction Project Management", "Cross-Cultural Team Coordination", "Budget Management ($1M+ Projects)", "MS Project & Scheduling", "Stakeholder Communication", "Risk Assessment & Mitigation"]
-    },
-    {
-      category: "CAD & Design Software",
-      icon: <Wrench className="w-6 h-6" />,
-      items: ["SolidWorks (Advanced)", "AutoCAD", "MS Project", "Technical Drawings & Specifications", "3D Modeling & Assembly Design", "Engineering Documentation"]
-    },
-    {
-      category: "Quality & Process Excellence",
-      icon: <Target className="w-6 h-6" />,
-      items: ["Lean Six Sigma Green Belt", "Quality Control Systems", "First Article Inspection", "Statistical Process Control", "ISO Standards Knowledge", "Dimensional Analysis & Calibration"]
-    },
-    {
-      category: "International & Communication",
-      icon: <Globe className="w-6 h-6" />,
-      items: ["Spanish (Native)", "English (Fluent)", "French (Conversational)", "International Project Experience", "Cross-Cultural Communication", "Technical Translation"]
-    },
-    {
-      category: "Fresh Engineering Perspective",
-      icon: <Lightbulb className="w-6 h-6" />,
-      items: ["Latest Engineering Technologies", "Modern Industry Standards", "Innovative Problem-Solving", "Rapid Learning & Adaptation", "Digital-Native Technical Skills", "Fresh Graduate Energy & Enthusiasm"]
     }
   ]
 }
@@ -704,7 +459,7 @@ const companyDetails: Record<string, CompanyDetail> = {
     ]
   },
   "inova-geophysical": {
-    id: "inova-geophysical", 
+    id: "inova-geophysical",
     name: "INOVA Geophysical",
     logo: "🌍",
     industry: "Seismic Data Acquisition & Geophysical Equipment",
@@ -773,7 +528,7 @@ const companyDetails: Record<string, CompanyDetail> = {
         description: "Design and manufacturing of advanced Vibroseis vehicles for global seismic acquisition, featuring automated assembly integration reducing production time by 70%.",
         challenges: [
           "Extreme environmental operating conditions",
-          "High-precision seismic energy transmission requirements", 
+          "High-precision seismic energy transmission requirements",
           "Complex hydraulic system integration",
           "Rapid manufacturing scale-up demands"
         ],
@@ -849,7 +604,7 @@ const companyDetails: Record<string, CompanyDetail> = {
     description: "KBR is a global provider of differentiated professional services and technologies across the asset and program lifecycle within the Government Solutions and Sustainable Technology Solutions markets. We deliver science, technology and engineering solutions to governments and companies around the world.",
     businessFocus: [
       "Government Solutions & Defense",
-      "Sustainable Technology Solutions", 
+      "Sustainable Technology Solutions",
       "Engineering, Procurement & Construction",
       "Refinery & Chemical Plant Engineering",
       "LNG & Gas Processing Facilities",
@@ -858,7 +613,7 @@ const companyDetails: Record<string, CompanyDetail> = {
     ],
     keyProducts: [
       "Petrochemical EPC Projects",
-      "LNG Processing Facilities", 
+      "LNG Processing Facilities",
       "Refinery Engineering Services",
       "Process Equipment Design",
       "Technology Solutions",
@@ -1523,7 +1278,7 @@ const companyDetails: Record<string, CompanyDetail> = {
 const downloadDavidResume = () => {
   const htmlUrl = '/david-resume.html?print=true'
   console.log('Opening David\'s resume:', htmlUrl)
-  
+
   try {
     const newWindow = window.open(htmlUrl, '_blank')
     if (!newWindow) {
@@ -1539,7 +1294,7 @@ const downloadDavidResume = () => {
 const downloadElsaResume = () => {
   const htmlUrl = '/Elsa_Monsuy_Resume.html?print=true'
   console.log('Opening Elsa\'s resume:', htmlUrl)
-  
+
   try {
     const newWindow = window.open(htmlUrl, '_blank')
     if (!newWindow) {
@@ -1588,52 +1343,9 @@ function CompanyLogo({ companyId, size = "text-4xl" }: { companyId: string, size
   return logos[companyId] || <div className={`${size} text-gray-400`}>🏢</div>
 }
 
-// Portfolio Switcher Component
-function PortfolioSwitcher({ activeProfile, setActiveProfile }: { activeProfile: string, setActiveProfile: (profile: string) => void }) {
-  return (
-    <div className="fixed top-4 right-4 z-50">
-      <div className="bg-white/95 backdrop-blur-lg shadow-lg border border-gray-200/50 rounded-xl p-2">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setActiveProfile('david')}
-            className={clsx(
-              'flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300',
-              activeProfile === 'david'
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'text-gray-700 hover:bg-blue-50'
-            )}
-          >
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-              DC
-            </div>
-            <span className="hidden sm:block">David</span>
-          </button>
-          
-          <ArrowLeftRight className="w-4 h-4 text-gray-400" />
-          
-          <button
-            onClick={() => setActiveProfile('wife')}
-            className={clsx(
-              'flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300',
-              activeProfile === 'wife'
-                ? 'bg-emerald-600 text-white shadow-lg'
-                : 'text-gray-700 hover:bg-emerald-50'
-            )}
-          >
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-              EN
-            </div>
-            <span className="hidden sm:block">Elsa</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 // Navigation Component
-function Navigation({ activeSection, setActiveSection, currentProfile, downloadResume }: { 
-  activeSection: string, 
+function Navigation({ activeSection, setActiveSection, currentProfile, downloadResume }: {
+  activeSection: string,
   setActiveSection: (section: string) => void,
   currentProfile: string,
   downloadResume: (profile: string) => void
@@ -1674,7 +1386,7 @@ function Navigation({ activeSection, setActiveSection, currentProfile, downloadR
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = activeSection === item.id
-              
+
               return (
                 <button
                   key={item.id}
@@ -1682,7 +1394,7 @@ function Navigation({ activeSection, setActiveSection, currentProfile, downloadR
                   className={clsx(
                     'flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300',
                     isActive
-                      ? currentProfile === 'david' 
+                      ? currentProfile === 'david'
                         ? 'bg-blue-600 text-white shadow-lg scale-105'
                         : 'bg-emerald-600 text-white shadow-lg scale-105'
                       : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
@@ -1697,13 +1409,12 @@ function Navigation({ activeSection, setActiveSection, currentProfile, downloadR
 
           {/* Resume Download & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <button 
+            <button
               onClick={() => downloadResume(currentProfile)}
-              className={`hidden md:flex items-center space-x-2 px-4 py-2 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
-              currentProfile === 'david' 
+              className={`hidden md:flex items-center space-x-2 px-4 py-2 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${currentProfile === 'david'
                 ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
                 : 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700'
-            }`}>
+                }`}>
               <Download className="w-4 h-4" />
               <span>Resume</span>
             </button>
@@ -1730,7 +1441,7 @@ function Navigation({ activeSection, setActiveSection, currentProfile, downloadR
                 {navItems.map((item) => {
                   const Icon = item.icon
                   const isActive = activeSection === item.id
-                  
+
                   return (
                     <button
                       key={item.id}
@@ -1764,7 +1475,7 @@ function Navigation({ activeSection, setActiveSection, currentProfile, downloadR
 // About Section
 function AboutSection({ currentProfile, downloadResume }: { currentProfile: string, downloadResume: (profile: string) => void }) {
   const profile = profiles[currentProfile]
-  
+
   const profileGradients = {
     david: 'from-blue-50 via-indigo-50 to-cyan-100',
     wife: 'from-purple-50 via-violet-50 to-indigo-100'
@@ -1785,7 +1496,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
     <section className={`section-padding bg-gradient-to-br ${profileGradients[currentProfile as keyof typeof profileGradients]} relative overflow-hidden`}>
       {/* Industrial Background for David */}
       {currentProfile === 'david' && (
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{
             backgroundImage: 'url("/profile-background.jpg")',
@@ -1795,20 +1506,20 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
           }}
         />
       )}
-      
+
       {/* Add background image for Elsa */}
       {currentProfile === 'wife' && (
         <>
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center opacity-35"
             style={{ backgroundImage: 'url(/elsa-background.png)' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10"></div>
         </>
       )}
-      
+
       <div className="absolute inset-0 bg-white/10 backdrop-blur-none"></div>
-      
+
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1818,8 +1529,8 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
             className="mb-8"
           >
             {profile.profileImage ? (
-              <img 
-                src={profile.profileImage} 
+              <img
+                src={profile.profileImage}
                 alt={`${profile.name} - ${profile.title}`}
                 className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white shadow-2xl"
               />
@@ -1838,7 +1549,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
           <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
             {profile.summary}
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
               <MapPin className={`w-5 h-5 ${currentProfile === 'david' ? 'text-blue-600' : 'text-purple-600'}`} />
@@ -1865,7 +1576,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get in Touch
               </button>
-              <button 
+              <button
                 onClick={() => downloadResume(currentProfile)}
                 className={`inline-flex items-center px-6 py-3 text-base font-medium border border-transparent rounded-lg transition-all duration-200 ${buttonColors[currentProfile as keyof typeof buttonColors].secondary}`}
               >
@@ -1887,12 +1598,12 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Industrial Equipment Expertise</h3>
                 <p className="text-gray-700">Specialized in Gas Compression & Process Equipment Design</p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <img 
-                    src="/profile-background.jpg" 
-                    alt="Industrial Gas Compression Equipment" 
+                  <img
+                    src="/profile-background.jpg"
+                    alt="Industrial Gas Compression Equipment"
                     className="w-full h-64 object-cover rounded-xl shadow-lg"
                   />
                 </div>
@@ -1935,7 +1646,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Fresh Engineering Excellence</h3>
                 <p className="text-gray-700">The Strategic Advantage of Hiring a New Graduate Engineer</p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div className="flex items-start space-x-3">
@@ -1947,7 +1658,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                       <p className="text-gray-700 text-sm">Recent UT Tyler graduate with current industry standards, modern methodologies, and cutting-edge engineering practices</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
                       <TrendingUp className="w-4 h-4 text-purple-600" />
@@ -1957,7 +1668,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                       <p className="text-gray-700 text-sm">Eager to learn, adapt quickly, and grow with your organization - perfect for long-term engineering team development</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
                       <Globe className="w-4 h-4 text-purple-600" />
@@ -1968,7 +1679,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
@@ -1979,7 +1690,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                       <p className="text-gray-700 text-sm">Lean Six Sigma certified with hands-on experience in quality control and process improvement methodologies</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
                       <Users className="w-4 h-4 text-purple-600" />
@@ -1989,7 +1700,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                       <p className="text-gray-700 text-sm">Brings innovative thinking and modern approaches to traditional engineering challenges - no outdated habits to unlearn</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
                       <Zap className="w-4 h-4 text-purple-600" />
@@ -2001,11 +1712,11 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8 p-6 bg-purple-50 rounded-xl border border-purple-200">
                 <h4 className="font-bold text-purple-800 mb-2">Investment in Your Future</h4>
                 <p className="text-purple-700 text-sm">
-                  Hiring a talented new graduate like Elsa means investing in someone who will grow with your company, 
+                  Hiring a talented new graduate like Elsa means investing in someone who will grow with your company,
                   contribute fresh ideas, and develop into a cornerstone of your engineering team for years to come.
                 </p>
               </div>
@@ -2021,18 +1732,18 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
               className="mt-16 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 text-white"
             >
               {/* Faded Background Image */}
-              <div 
+              <div
                 className="absolute inset-0 bg-cover bg-center opacity-45"
                 style={{ backgroundImage: 'url(/elsa-background.png)' }}
               ></div>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-gray-900/70 to-indigo-900/70"></div>
-              
+
               <div className="relative z-10">
                 <div className="text-center mb-8">
                   <h3 className="text-3xl font-bold mb-2">Rugged Systems Engineering Excellence</h3>
                   <p className="text-gray-300 text-lg">How Mechanical Engineers Build Mission-Critical Systems</p>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="space-y-6">
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -2055,19 +1766,19 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                         </li>
                       </ul>
                     </div>
-                    
+
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                       <h4 className="text-xl font-bold text-purple-300 mb-3">Mechanical Engineering Impact</h4>
                       <p className="text-gray-300 text-sm">
-                        Mechanical engineers are essential in developing rugged systems, providing thermal management, 
+                        Mechanical engineers are essential in developing rugged systems, providing thermal management,
                         structural integrity, and environmental protection for sensitive electronic components.
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <h4 className="text-xl font-bold text-white mb-4">Engineering Contributions to Rugged Systems</h4>
-                    
+
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
@@ -2078,7 +1789,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                           <p className="text-gray-400 text-sm">Designing heat dissipation systems for electronic components operating in extreme temperatures</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start space-x-3">
                         <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
                           <Shield className="w-5 h-5 text-white" />
@@ -2088,7 +1799,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                           <p className="text-gray-400 text-sm">Creating robust enclosures that protect sensitive electronics from dust, moisture, and shock</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start space-x-3">
                         <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
                           <Wrench className="w-5 h-5 text-white" />
@@ -2098,7 +1809,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                           <p className="text-gray-400 text-sm">Ensuring mechanical systems can withstand vibration, impact, and environmental stresses</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start space-x-3">
                         <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
                           <CheckCircle className="w-5 h-5 text-white" />
@@ -2111,7 +1822,7 @@ function AboutSection({ currentProfile, downloadResume }: { currentProfile: stri
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mt-8 text-center">
                   <div className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                     <Zap className="w-5 h-5 mr-2" />
@@ -2154,7 +1865,7 @@ function ExperienceSection({ currentProfile }: { currentProfile: string }) {
             Professional Experience
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {currentProfile === 'david' 
+            {currentProfile === 'david'
               ? "15+ years of progressive experience in mechanical design and engineering across leading companies in the energy and technology sectors."
               : "Professional experience in mechanical design, project management, and quality control across manufacturing and construction industries. Expertise in CAD software, Lean Six Sigma processes, and multilingual communication."
             }
@@ -2167,14 +1878,14 @@ function ExperienceSection({ currentProfile }: { currentProfile: string }) {
             {currentExperiences.map((experience: Experience, index: number) => {
               const colorClasses = getColorClasses(experience.color)
               const isActive = activeTab === index
-              
+
               return (
                 <button
                   key={experience.id}
                   onClick={() => setActiveTab(index)}
                   className={clsx(
                     'flex items-center gap-3 px-6 py-4 rounded-lg font-semibold transition-all duration-300 border-2',
-                    isActive 
+                    isActive
                       ? `${colorClasses.bg} ${colorClasses.border} ${colorClasses.accent}`
                       : 'border-transparent text-gray-600 hover:bg-gray-100'
                   )}
@@ -2199,9 +1910,9 @@ function ExperienceSection({ currentProfile }: { currentProfile: string }) {
           >
             {currentExperiences.map((experience: Experience, index: number) => {
               if (index !== activeTab) return null
-              
+
               const colorClasses = getColorClasses(experience.color)
-              
+
               return (
                 <div key={experience.id}>
                   <div className="flex items-center gap-4 mb-6">
@@ -2240,8 +1951,8 @@ function ExperienceSection({ currentProfile }: { currentProfile: string }) {
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Technologies & Tools</h4>
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech: string, techIndex: number) => (
-                        <span 
-                          key={techIndex} 
+                        <span
+                          key={techIndex}
                           className={`px-3 py-1 ${colorClasses.bg} ${colorClasses.accent} rounded-full text-sm font-medium`}
                         >
                           {tech}
@@ -2276,7 +1987,7 @@ function ExperienceSection({ currentProfile }: { currentProfile: string }) {
 // Skills Section
 function SkillsSection({ currentProfile }: { currentProfile: string }) {
   const currentSkills = allSkills[currentProfile] || []
-  
+
   const profileColors = {
     david: 'text-blue-600',
     wife: 'text-purple-600'
@@ -2330,7 +2041,7 @@ function SkillsSection({ currentProfile }: { currentProfile: string }) {
 // Contact Section
 function ContactSection({ currentProfile, downloadResume }: { currentProfile: string, downloadResume: (profile: string) => void }) {
   const profile = profiles[currentProfile]
-  
+
   const profileGradients = {
     david: 'from-blue-600 to-indigo-700',
     wife: 'from-purple-600 to-violet-700'
@@ -2349,12 +2060,12 @@ function ContactSection({ currentProfile, downloadResume }: { currentProfile: st
               Let's Work Together
             </h2>
             <p className="text-xl mb-12 opacity-90">
-              {currentProfile === 'david' 
+              {currentProfile === 'david'
                 ? "Ready to bring your mechanical design projects to life? Let's discuss how my expertise can contribute to your team's success."
                 : "Ready to bring my mechanical engineering expertise to your next project? Let's discuss how my experience in design, project management, and quality control can contribute to your team's success."
               }
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <Mail className="w-8 h-8 mx-auto mb-4 opacity-80" />
@@ -2378,7 +2089,7 @@ function ContactSection({ currentProfile, downloadResume }: { currentProfile: st
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </button>
-              <button 
+              <button
                 onClick={() => downloadResume(currentProfile)}
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
@@ -2404,7 +2115,7 @@ function CompanyDetailPage() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Company Not Found</h1>
-          <button 
+          <button
             onClick={() => navigate('/')}
             className="btn-primary"
           >
@@ -2545,7 +2256,7 @@ function CompanyDetailPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="space-y-8">
               {company.designProcess.map((step, index) => (
                 <motion.div
@@ -2569,7 +2280,7 @@ function CompanyDetailPage() {
                         </span>
                       </div>
                       <p className="text-gray-700 mb-6 leading-relaxed">{step.description}</p>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-3">Deliverables</h4>
@@ -2586,7 +2297,7 @@ function CompanyDetailPage() {
                           <h4 className="font-semibold text-gray-900 mb-3">Tools & Technologies</h4>
                           <div className="flex flex-wrap gap-2">
                             {step.tools.map((tool, tIndex) => (
-                              <span 
+                              <span
                                 key={tIndex}
                                 className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
                               >
@@ -2637,9 +2348,9 @@ function CompanyDetailPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-700 leading-relaxed mb-6">{project.description}</p>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Key Challenges</h4>
@@ -2652,7 +2363,7 @@ function CompanyDetailPage() {
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Solutions Implemented</h4>
                       <ul className="space-y-1">
@@ -2664,7 +2375,7 @@ function CompanyDetailPage() {
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Project Outcomes</h4>
                       <ul className="space-y-1">
@@ -2695,7 +2406,7 @@ function CompanyDetailPage() {
                   Air-cooled heat exchangers and industrial cooling systems designed and manufactured for LNG and petrochemical applications
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
@@ -2704,8 +2415,8 @@ function CompanyDetailPage() {
                   className="relative"
                 >
                   <div className="bg-white rounded-2xl p-2 shadow-xl">
-                    <img 
-                      src="/industrial-equipment.jpg" 
+                    <img
+                      src="/industrial-equipment.jpg"
                       alt="Industrial air-cooled heat exchanger equipment designed by David Cornealius at Chart Industries"
                       className="w-full rounded-xl shadow-lg"
                     />
@@ -2714,7 +2425,7 @@ function CompanyDetailPage() {
                     </div>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -2742,7 +2453,7 @@ function CompanyDetailPage() {
                       </li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 text-white">
                     <h4 className="text-xl font-bold mb-3">Design Specifications</h4>
                     <div className="grid grid-cols-2 gap-4 text-sm">
@@ -2766,7 +2477,7 @@ function CompanyDetailPage() {
                   </div>
                 </motion.div>
               </div>
-              
+
               {/* Equipment Specifications Table */}
               <div className="mt-16">
                 <div className="bg-white rounded-2xl p-8 shadow-xl">
@@ -2851,9 +2562,8 @@ function CompanyDetailPage() {
 // Projects Section
 function ProjectsSection({ currentProfile }: { currentProfile: string }) {
   const professionalProjects = projectData[currentProfile] || []
-  const academicProjectsForProfile = academicProjects[currentProfile] || []
-  const allProjects = [...professionalProjects, ...academicProjectsForProfile]
-  
+  const allProjects = professionalProjects
+
   const profileColors = {
     david: {
       gradient: 'from-blue-50 via-indigo-50 to-cyan-100',
@@ -2861,7 +2571,7 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
       secondary: 'indigo-600'
     },
     wife: {
-      gradient: 'from-purple-50 via-violet-50 to-indigo-100', 
+      gradient: 'from-purple-50 via-violet-50 to-indigo-100',
       accent: 'purple-600',
       secondary: 'violet-600'
     }
@@ -2882,7 +2592,7 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
             {currentProfile === 'david' ? 'Featured Projects' : 'Engineering Projects & Achievements'}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {currentProfile === 'david' 
+            {currentProfile === 'david'
               ? "Innovative mechanical design solutions that drive efficiency and deliver measurable results across industries."
               : "A comprehensive showcase of engineering excellence spanning academic achievements, professional experience, and innovative problem-solving capabilities."
             }
@@ -2981,13 +2691,13 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
         >
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              {currentProfile === 'david' 
+              {currentProfile === 'david'
                 ? "Ready to Discuss Your Next Project?"
                 : "Ready to Contribute Fresh Engineering Perspective?"
               }
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              {currentProfile === 'david' 
+              {currentProfile === 'david'
                 ? "Let's collaborate on innovative mechanical design solutions that drive efficiency and exceed expectations."
                 : "I'm excited to bring my UT Tyler engineering education, fresh perspective, and proven ability to learn quickly to your engineering team."
               }
@@ -3006,7 +2716,6 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
 // Main App Component with Router
 function App() {
   const [activeSection, setActiveSection] = useState('about')
-  const [activeProfile, setActiveProfile] = useState('david')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -3043,32 +2752,31 @@ function App() {
         <Route path="/company/:companyId" element={<CompanyDetailPage />} />
         <Route path="/" element={
           <div className="min-h-screen bg-white">
-            <PortfolioSwitcher activeProfile={activeProfile} setActiveProfile={setActiveProfile} />
-            <Navigation 
-              activeSection={activeSection} 
-              setActiveSection={scrollToSection} 
-              currentProfile={activeProfile} 
-              downloadResume={downloadResume} 
+            <Navigation
+              activeSection={activeSection}
+              setActiveSection={scrollToSection}
+              currentProfile="david"
+              downloadResume={downloadResume}
             />
-            
+
             <div id="about">
-              <AboutSection currentProfile={activeProfile} downloadResume={downloadResume} />
+              <AboutSection currentProfile="david" downloadResume={downloadResume} />
             </div>
-            
+
             <div id="experience">
-              <ExperienceSection currentProfile={activeProfile} />
+              <ExperienceSection currentProfile="david" />
             </div>
-            
+
             <div id="projects">
-              <ProjectsSection currentProfile={activeProfile} />
+              <ProjectsSection currentProfile="david" />
             </div>
-            
+
             <div id="skills">
-              <SkillsSection currentProfile={activeProfile} />
+              <SkillsSection currentProfile="david" />
             </div>
-            
+
             <div id="contact">
-              <ContactSection currentProfile={activeProfile} downloadResume={downloadResume} />
+              <ContactSection currentProfile="david" downloadResume={downloadResume} />
             </div>
           </div>
         } />

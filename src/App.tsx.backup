@@ -129,24 +129,94 @@ interface Project {
 }
 
 const projectData: Record<string, Project[]> = {
-  elsa: [
+  david: [
     {
-      id: "international-energy-operations",
-      title: "International Energy Sector Operations - West Africa",
-      description: "Executed critical engineering operations in Equatorial Guinea's energy sector, demonstrating expertise in international project management and cross-cultural engineering collaboration essential for global oil and gas operations.",
-      category: "International Energy Operations",
-      technologies: ["International Project Management", "Cross-Cultural Engineering", "Energy Sector Operations", "Risk Assessment", "Regulatory Compliance"],
-      impact: "Proven international energy sector experience • Cross-cultural engineering leadership • Global operations expertise",
+      id: "gas-compression-system",
+      title: "High-Efficiency Gas Compression System Design",
+      description: "Led the design and optimization of wide-bore gas compression systems, delivering notable efficiency improvements that generated significant operational cost reductions for Chart Industries clients.",
+      category: "Process Equipment Innovation",
+      technologies: ["SolidWorks", "CFD Analysis", "HTRI", "PV Elite", "ASME Standards"],
+      impact: "Significant efficiency improvements • Substantial client cost savings • Reduced power consumption",
       highlights: [
-        "Successfully operated in West Africa's energy sector, gaining invaluable experience in international oil and gas markets",
-        "Demonstrated cultural adaptability and engineering excellence in challenging international environments",
-        "Developed expertise in international regulatory compliance and safety standards critical for global energy operations",
-        "Built strong foundation in international project coordination essential for multinational energy companies",
-        "Gained firsthand understanding of global energy infrastructure and operational challenges",
-        "Established proven track record of delivering results in complex international engineering environments"
+        "Pioneered advanced cooling system design that substantially reduced compression power requirements",
+        "Implemented CFD-optimized flow patterns improving overall system performance", 
+        "Achieved full ASME compliance for high-pressure operation while exceeding safety margins",
+        "Delivered measurable operational cost reductions through innovative design optimization",
+        "Established new performance benchmarks for gas compression efficiency in wide-bore applications"
       ],
-      timeline: "2018 - Present",
-      client: "International Energy Sector - Equatorial Guinea"
+      timeline: "6 months",
+      client: "Chart Industries"
+    },
+    {
+      id: "offshore-drilling-system",
+      title: "Mission-Critical Offshore Motion Compensation System",
+      description: "Engineered hydraulic motion compensation systems for deepwater drilling operations, achieving exceptional reliability ratings that prevented costly operational downtime.",
+      category: "Offshore Engineering Excellence",
+      technologies: ["AutoCAD", "Hydraulic Analysis", "FEA", "API Standards", "Safety Systems"],
+      impact: "Exceptional reliability performance • High load capacity systems • Zero system failures",
+      highlights: [
+        "Achieved outstanding reliability ratings, significantly exceeding industry standards",
+        "Designed for extreme sea state operations with consistent performance reliability",
+        "Prevented substantial potential downtime costs through robust engineering design",
+        "Engineered high-capacity systems enabling expanded deepwater drilling capabilities",
+        "Significantly reduced maintenance requirements through integrated accumulator design"
+      ],
+      timeline: "8 months",
+      client: "Control Flow Inc."
+    },
+    {
+      id: "petrochemical-plant",
+      title: "Large-Scale Petrochemical EPC Project Leadership",
+      description: "Delivered complex process equipment and piping system designs for major petrochemical projects, maintaining exceptional safety and delivery records while optimizing project costs.",
+      category: "Industrial Project Management",
+      technologies: ["AVEVA P&ID", "PV Elite", "ASME Code", "Process Engineering", "Project Management"],
+      impact: "Major projects delivered successfully • Significant cost optimizations • Excellent delivery record",
+      highlights: [
+        "Successfully delivered major petrochemical EPC projects with excellent completion rates",
+        "Optimized piping system designs resulting in substantial project cost savings",
+        "Achieved full ASME compliance while streamlining design review processes",
+        "Maintained exemplary safety record across all design phases and implementations",
+        "Established company-wide design standards significantly improving quality outcomes"
+      ],
+      timeline: "4 years",
+      client: "KBR"
+    },
+    {
+      id: "seismic-vehicle-optimization",
+      title: "Seismic Vehicle Component Cost Optimization",
+      description: "Redesigned critical seismic vehicle components and implemented design automation, delivering substantial cost savings while improving product durability and manufacturing efficiency.",
+      category: "Product Innovation & Automation",
+      technologies: ["SolidWorks", "Design Automation", "Manufacturing Optimization", "Cost Engineering"],
+      impact: "Substantial cost savings achieved • Faster delivery cycles • Excellent quality outcomes",
+      highlights: [
+        "Delivered significant cost savings through innovative component redesign",
+        "Reduced manufacturing costs substantially while improving product durability",
+        "Revolutionized design automation notably shortening development cycles",
+        "Achieved excellent quality delivery performance with minimal defects",
+        "Negotiated meaningful cost reductions through strategic supplier partnerships"
+      ],
+      timeline: "11 months",
+      client: "Inova Geophysical"
+    }
+  ],
+  wife: [
+    {
+      id: "international-construction",
+      title: "International Construction Project Management",
+      description: "Led complex construction projects in West Africa, managing multi-million dollar budgets and coordinating international teams across different time zones and cultural backgrounds.",
+      category: "International Project Management",
+      technologies: ["MS Project", "SolidWorks", "Project Management", "Budget Management", "Cross-Cultural Leadership"],
+      impact: "Successfully delivered $1M+ projects on time and within budget • International team coordination • Risk mitigation excellence",
+      highlights: [
+        "Managed construction projects exceeding $1M in challenging West African environments",
+        "Coordinated cross-cultural teams of contractors and engineers across multiple time zones",
+        "Developed comprehensive project specifications and conceptual designs using advanced software",
+        "Implemented continuous improvement initiatives resulting in enhanced operational efficiency",
+        "Created strategic mitigation plans preventing potential delays and cost overruns",
+        "Maintained excellent project delivery record while ensuring safety and quality standards"
+      ],
+      timeline: "2.5 years (2019-2021)",
+      client: "Diamonds Blocks Services - International Operations"
     },
     {
       id: "ut-tyler-foundation",
@@ -166,58 +236,56 @@ const projectData: Record<string, Project[]> = {
       client: "University of Texas at Tyler"
     },
     {
-      id: "industrial-quality-systems",
-      title: "Industrial Quality Systems & Regulatory Compliance",
-      description: "Engineered comprehensive quality control systems for industrial manufacturing operations, implementing rigorous inspection protocols and regulatory compliance frameworks essential for oil and gas industry standards.",
-      category: "Quality Systems & Regulatory Compliance",
-      technologies: ["Quality Management Systems", "Regulatory Compliance", "Precision Measurement", "Industrial Standards", "Safety Protocols"],
-      impact: "99.8% quality compliance achieved • Zero safety incidents • Regulatory excellence",
+      id: "quality-systems-optimization",
+      title: "Advanced Quality Control Systems Implementation",
+      description: "Developed and implemented comprehensive quality control protocols combining first article inspection techniques with statistical process control methodologies.",
+      category: "Quality Engineering & Process Improvement",
+      technologies: ["First Article Inspection", "Statistical Process Control", "Precision Measurement", "Quality Documentation", "Process Improvement"],
+      impact: "Enhanced product quality • Reduced defect rates • Improved inspection efficiency",
       highlights: [
-        "Achieved 99.8% quality compliance rate through systematic implementation of industrial quality standards",
-        "Developed comprehensive regulatory compliance documentation meeting stringent industry requirements",
-        "Implemented precision measurement protocols ensuring accuracy critical for high-stakes industrial operations",
-        "Established robust safety and quality protocols preventing non-conforming products from reaching operations",
-        "Coordinated cross-functional teams to optimize quality workflows and maintain operational excellence",
-        "Executed calibration audits and measurement system validation essential for critical industrial applications"
+        "Implemented advanced first article inspection procedures ensuring product consistency",
+        "Developed comprehensive quality documentation systems improving compliance performance",
+        "Conducted precision dimensional inspections using calibrated measuring instruments",
+        "Coordinated with material operations and planning teams optimizing production workflows",
+        "Established non-conforming product identification and documentation protocols",
+        "Performed tool calibration audits ensuring measurement accuracy and reliability"
       ],
       timeline: "1.5 years (2017-2018)",
-      client: "AmTex Machine Products - Industrial Operations"
+      client: "AmTex Machine Product"
     },
     {
-      id: "process-optimization-excellence",
-      title: "Industrial Process Optimization & Operational Excellence",
-      description: "Spearheaded comprehensive process optimization initiatives using Lean Six Sigma methodologies, delivering substantial operational improvements and cost reductions critical for competitive industrial operations.",
-      category: "Process Excellence & Operational Efficiency",
-      technologies: ["Lean Six Sigma Green Belt", "Process Analysis", "Operational Excellence", "Cost Optimization", "Performance Metrics"],
-      impact: "15% production capacity improvement • 25% waste reduction • Significant cost savings",
+      id: "lean-six-sigma-implementation",
+      title: "Lean Six Sigma Manufacturing Optimization",
+      description: "Led comprehensive process optimization initiatives using Lean Six Sigma methodologies, generating meaningful cost savings and productivity improvements.",
+      category: "Process Excellence & Optimization",
+      technologies: ["Lean Six Sigma", "Process Analysis", "Equipment Optimization", "Production Management"],
+      impact: "Substantial annual savings • Increased productivity • Reduced operational waste",
       highlights: [
-        "Achieved 15% improvement in production capacity through systematic process analysis and optimization",
-        "Reduced operational waste by 25% through implementation of Lean methodologies and continuous improvement",
-        "Delivered significant cost savings through elimination of process inefficiencies and bottlenecks",
-        "Enhanced equipment reliability and reduced downtime through predictive maintenance protocols",
-        "Established performance metrics and reporting systems enabling data-driven operational decisions",
-        "Implemented root cause analysis procedures preventing recurring operational issues"
+        "Generated significant annual savings through Lean Six Sigma implementation",
+        "Substantially reduced production waste optimizing manufacturing workflows",
+        "Notably increased overall productivity through equipment downtime reduction",
+        "Improved production efficiency substantially identifying and eliminating bottlenecks",
+        "Enhanced management decision-making capabilities through effective technical reporting systems"
       ],
       timeline: "2 years", 
-      client: "Diamond Blocks Services - Process Engineering"
+      client: "Diamonds Blocks"
     },
     {
-      id: "reliability-safety-systems",
-      title: "Reliability Engineering & Safety-Critical Systems",
-      description: "Developed and implemented reliability engineering protocols and safety-critical quality systems essential for high-stakes industrial operations where failure is not an option.",
-      category: "Reliability Engineering & Safety Systems",
-      technologies: ["Reliability Engineering", "Safety-Critical Systems", "Failure Analysis", "Risk Assessment", "Quality Assurance"],
-      impact: "Zero critical failures • 99.9% reliability achieved • Exceptional safety record",
+      id: "precision-quality-control",
+      title: "Precision Quality Control System Implementation",
+      description: "Established rigorous quality control protocols and precision measurement systems that eliminated defects and significantly improved customer satisfaction levels.",
+      category: "Quality Control Excellence",
+      technologies: ["Precision Measurement", "Quality Control", "Dimensional Analysis", "Process Improvement"],
+      impact: "Substantial defect reduction • Exceptional accuracy achieved • Excellent customer satisfaction",
       highlights: [
-        "Achieved zero critical failures through implementation of robust reliability engineering protocols",
-        "Maintained 99.9% system reliability through systematic quality assurance and preventive measures",
-        "Developed comprehensive failure analysis procedures preventing costly operational disruptions",
-        "Implemented safety-critical quality systems ensuring operational integrity in high-stakes environments",
-        "Established risk assessment protocols identifying and mitigating potential failure modes before occurrence",
-        "Created comprehensive documentation systems supporting regulatory compliance and operational excellence"
+        "Significantly reduced defect rates resulting in substantial savings in rework costs",
+        "Achieved exceptional dimensional accuracy consistently exceeding industry standards",
+        "Prevented numerous non-conforming products from reaching customers",
+        "Maintained excellent customer satisfaction with minimal quality-related complaints",
+        "Improved detection accuracy substantially while reducing inspection time requirements"
       ],
       timeline: "2 years",
-      client: "AmTex Machine Products - Critical Systems"
+      client: "AmTex Machine"
     }
   ]
 }
@@ -293,11 +361,11 @@ const profiles: Record<string, Profile> = {
   },
   wife: {
     name: "Elsa Nlang Monsuy",
-    title: "Mechanical Engineer",
+    title: "Mechanical Engineer | International Project Manager",
     email: "elsamonsuy@yahoo.com", 
     phone: "(713) 820-2968",
     location: "Houston, TX",
-    summary: "Passionate Mechanical Engineer who thrives on solving complex challenges and bringing innovative ideas to life. As a proud 2019 UT Tyler graduate, I've had the incredible opportunity to manage multi-million dollar construction projects across West Africa, where I discovered my love for leading diverse, international teams. I'm energized by the intersection of technical precision and creative problem-solving – whether I'm optimizing manufacturing processes with Lean Six Sigma or designing solutions in CAD. Being trilingual has opened doors to meaningful collaborations across cultures, and I bring both fresh engineering insights and real-world grit to every project I tackle.",
+    summary: "Dynamic Mechanical Engineer and 2019 University of Texas at Tyler graduate with exceptional international project management experience. Successfully managed $1M+ construction projects in West Africa while coordinating cross-cultural teams across multiple time zones. Proven expertise in Lean Six Sigma processes, advanced CAD design, quality control, and technical leadership. Trilingual professional combining fresh engineering perspective with hands-on experience in challenging international environments.",
     avatar: "EN",
     profileImage: "/elsa-profile.jpg",
   }
@@ -384,36 +452,37 @@ const allExperiences: Record<string, Experience[]> = {
       company: "Systel",
       position: "Mechanical Engineer",
       location: "Houston, TX", 
-      startDate: "2020",
+      startDate: "Aug 2021",
       endDate: "Present",
       logo: "",
       color: "emerald",
       description: [
-        "• Design and validate electro-mechanical systems through comprehensive testing protocols, identifying critical failure modes and implementing preventive design modifications to ensure system reliability",
-        "• Conduct precision mechanical testing on electronic assemblies using advanced stress analysis techniques, thermal cycling, and vibration testing to validate performance under operational conditions",
-        "• Collaborate with cross-functional design teams to optimize mechanical interfaces, achieving 25% reduction in component failures through root cause analysis and design improvements",
-        "• Develop and implement automated testing procedures integrating mechanical measurement systems with electronic validation protocols, improving testing accuracy by 30%",
-        "• Create comprehensive engineering documentation including test procedures, failure analysis reports, and design specifications to support product development and manufacturing processes"
+        "• Applied mechanical engineering principles to develop comprehensive testing protocols for electro-mechanical systems, validating design specifications and identifying critical failure modes through systematic analysis",
+        "• Conducted precision mechanical and thermal testing on complex electronic assemblies, performing stress analysis and component validation to ensure design integrity and operational reliability",
+        "• Collaborated with design engineers to optimize mechanical interfaces and thermal management systems, reducing component failure rates through rigorous engineering analysis and root cause investigation",
+        "• Implemented automated testing procedures integrating mechanical measurement systems with electronic validation, improving testing accuracy while applying engineering fundamentals to complex technical challenges",
+        "• Created detailed engineering documentation and failure analysis reports, leveraging UT Tyler mechanical engineering education to resolve technical issues and improve product design specifications"
       ],
       technologies: ["Mechanical System Analysis", "Thermal Testing", "Stress Analysis", "Design Validation", "Engineering Documentation", "Failure Mode Analysis", "Technical Problem Solving"]
     },
     {
       id: "diamonds-blocks",
-      company: "Diamond Blocks Services",
-      position: "Manufacturing Engineering Intern",
+      company: "Diamonds Blocks Services",
+      position: "Construction Project Manager",
       location: "Malabo, Equatorial Guinea",
-      startDate: "May 2018",
-      endDate: "Aug 2018",
+      startDate: "May 2019",
+      endDate: "Aug 2021",
       logo: "🏗️",
       color: "purple",
       description: [
-        "• You know that feeling when you finally understand a complex puzzle? That's exactly what happened when I first started interpreting engineering drawings and blueprints – suddenly everything clicked and I could see how all the pieces fit together in the real manufacturing world",
-        "• I became obsessed with time studies (in the best way!) because watching how tiny tweaks could dramatically boost production capacity was like discovering superpowers – who knew a few seconds here and there could transform entire operations?",
-        "• Testing product sub-systems became my favorite detective work – I'd dig deep to validate reliability performance, and there's nothing quite like that 'aha!' moment when you catch something that could prevent future failures",
-        "• Working across maintenance, production quality, and safety departments was like getting a backstage pass to see how a manufacturing symphony really works – every department playing their part to create something amazing",
-        "• Being the intern who actually got to contribute ideas to improve our product development process? That was pure gold! Seeing my suggestions implemented and making a real difference gave me such a rush"
+        "• Successfully managed complex international construction projects in West Africa, delivering projects on time and within budget in challenging environments",
+        "• Generated comprehensive project specifications and conceptual designs using MS Project and SolidWorks, ensuring technical excellence and regulatory compliance",
+        "• Coordinated cross-cultural teams of contractors and engineers across multiple time zones, maintaining effective communication and project momentum",
+        "• Implemented continuous improvement initiatives for existing tooling and equipment, resulting in enhanced operational efficiency and reduced downtime",
+        "• Monitored project budgets exceeding $1M+ and complex schedules, providing detailed monthly updates to international stakeholders and executive leadership",
+        "• Developed and implemented strategic mitigation plans to prevent potential delays and cost overruns, maintaining excellent project delivery record"
       ],
-      technologies: ["Engineering Drawings", "Blueprint Interpretation", "Time Studies", "Reliability Testing", "Production Quality", "Process Improvement", "Technical Support"]
+      technologies: ["MS Project", "SolidWorks", "Project Management", "International Construction", "Budget Management", "Stakeholder Coordination", "Risk Management"]
     },
     {
       id: "amtex-machine",
@@ -425,12 +494,12 @@ const allExperiences: Record<string, Experience[]> = {
       logo: "🔍",
       color: "blue",
       description: [
-        "• I took pride in performing thorough quality inspections, knowing that my attention to detail helped maintain the exceptional standards our customers expected from every product",
-        "• Working with precision measuring instruments became second nature – there's something deeply satisfying about conducting first article inspections and knowing everything meets exact specifications",
-        "• I enjoyed collaborating with material operations and planning teams during weekly evaluations, finding ways to optimize our production workflows and make everyone's job easier",
-        "• Being the person who caught non-conforming products before they reached customers felt like being a guardian of quality – I made sure everything was properly documented and processed",
-        "• I developed detailed monitoring systems that not only tracked our production but actually supported our continuous improvement efforts – data that made a real difference",
-        "• From specification checks to tool calibration audits, I made sure our equipment stayed accurate and reliable – the foundation of everything we produced"
+        "• Performed comprehensive quality inspections ensuring consistency across all manufactured products, maintaining exceptional quality standards",
+        "• Conducted first article inspections and routine dimensional inspections using advanced precision measuring instruments and calibrated tools",
+        "• Executed weekly requirement evaluations in coordination with material operations and planning teams, optimizing production workflows",
+        "• Ensured non-conforming products were properly identified, documented, and processed according to quality protocols, preventing customer issues",
+        "• Maintained detailed monitoring and recording systems for product and production information, supporting continuous improvement initiatives",
+        "• Conducted online specification checks, dimensional inspections, and tool calibration audits, ensuring equipment accuracy and measurement reliability"
       ],
       technologies: ["Precision Measurement", "Quality Control", "Dimensional Inspection", "First Article Inspection", "Tool Calibration", "Documentation Systems", "Statistical Process Control"]
     }
@@ -1511,16 +1580,7 @@ function CompanyLogo({ companyId, size = "text-4xl" }: { companyId: string, size
       </div>
     ),
     "control-flow": <div className={`${size} font-bold text-orange-600`}>⚙️</div>,
-    "systel": (
-      <div className={`${size} flex items-center justify-center`}>
-        <img 
-          src="/systel-logo.svg" 
-          alt="Systel" 
-          className="h-8 w-auto max-w-full object-contain"
-          style={{ maxHeight: '32px' }}
-        />
-      </div>
-    ),
+    "systel": <div className={`${size} font-bold text-purple-600`}>🔧</div>,
     "diamonds-blocks": <div className={`${size} font-bold text-indigo-600`}>💎</div>,
     "amtex": <div className={`${size} font-bold text-teal-600`}>🏭</div>
   }
@@ -2946,8 +3006,7 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
 // Main App Component with Router
 function App() {
   const [activeSection, setActiveSection] = useState('about')
-  // Elsa's portfolio - hardcoded to Elsa's profile only
-  const activeProfile = 'elsa'
+  const [activeProfile, setActiveProfile] = useState('david')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -2984,6 +3043,7 @@ function App() {
         <Route path="/company/:companyId" element={<CompanyDetailPage />} />
         <Route path="/" element={
           <div className="min-h-screen bg-white">
+            <PortfolioSwitcher activeProfile={activeProfile} setActiveProfile={setActiveProfile} />
             <Navigation 
               activeSection={activeSection} 
               setActiveSection={scrollToSection} 

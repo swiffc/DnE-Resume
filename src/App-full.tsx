@@ -3006,8 +3006,7 @@ function ProjectsSection({ currentProfile }: { currentProfile: string }) {
 // Main App Component with Router
 function App() {
   const [activeSection, setActiveSection] = useState('about')
-  // David's portfolio - hardcoded to David's profile only
-  const activeProfile = 'david'
+  const [activeProfile, setActiveProfile] = useState('david')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -3044,6 +3043,7 @@ function App() {
         <Route path="/company/:companyId" element={<CompanyDetailPage />} />
         <Route path="/" element={
           <div className="min-h-screen bg-white">
+            <PortfolioSwitcher activeProfile={activeProfile} setActiveProfile={setActiveProfile} />
             <Navigation 
               activeSection={activeSection} 
               setActiveSection={scrollToSection} 
