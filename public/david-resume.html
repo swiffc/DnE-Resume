@@ -1,484 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Cornealius - Mechanical Designer Resume</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.4;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
             color: #333;
             background: #f5f5f5;
             font-size: 11pt;
         }
-        
+
         .resume {
             max-width: 8.5in;
-            min-height: 11in;
             margin: 20px auto;
             background: white;
-            display: flex;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 0.5in 0.6in;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        
-        .sidebar {
-            width: 35%;
-            background: linear-gradient(135deg, #4a9999 0%, #2d5555 100%);
-            color: white;
-            padding: 40px 30px;
-            position: relative;
-            min-height: 100%;
-        }
-        
-        .main-content {
-            width: 65%;
-            padding: 40px 35px;
-            background: white;
-            min-height: 100%;
-        }
-        
-        .profile-section {
+
+        /* Header */
+        .header {
             text-align: center;
-            margin-bottom: 30px;
+            border-bottom: 2px solid #2d5555;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
-        
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid rgba(255,255,255,0.2);
-            margin: 0 auto 20px;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-            color: white;
-        }
-        
+
         .name {
             font-size: 24pt;
-            font-weight: 700;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+            font-weight: bold;
+            color: #2d5555;
             letter-spacing: 1px;
+            margin-bottom: 5px;
         }
-        
+
         .title {
             font-size: 12pt;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 30px;
+            color: #555;
+            margin-bottom: 10px;
         }
-        
+
         .contact-info {
-            margin-bottom: 35px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
             font-size: 10pt;
+            color: #444;
         }
-        
-        .contact-icon {
-            width: 16px;
-            margin-right: 12px;
-            opacity: 0.8;
+
+        .contact-info span {
+            margin: 0 10px;
         }
-        
-        .sidebar-section {
-            margin-bottom: 35px;
+
+        .contact-divider {
+            color: #999;
         }
-        
-        .sidebar-title {
-            font-size: 12pt;
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 8px;
-        }
-        
-        .skill-item {
-            margin-bottom: 8px;
-            font-size: 9pt;
-            line-height: 1.4;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .skill-bullet {
-            margin-right: 8px;
-            color: rgba(255,255,255,0.8);
-            font-weight: bold;
-        }
-        
-        .certification-item {
-            margin-bottom: 12px;
-        }
-        
-        .cert-name {
-            font-size: 9pt;
-            line-height: 1.3;
-            opacity: 0.9;
-        }
-        
-        .main-title {
-            font-size: 14pt;
-            font-weight: 700;
+
+        .contact-info a {
             color: #2d5555;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-decoration: none;
         }
-        
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 18px;
+        }
+
         .section-title {
             font-size: 12pt;
-            font-weight: 700;
+            font-weight: bold;
             color: #2d5555;
-            margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            border-bottom: 2px solid #4a9999;
-            padding-bottom: 5px;
+            border-bottom: 1px solid #2d5555;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
         }
-        
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .objective-text {
+
+        /* Summary */
+        .summary-text {
             font-size: 10pt;
-            line-height: 1.5;
             text-align: justify;
             color: #444;
         }
-        
-        .experience-item {
-            margin-bottom: 20px;
-            page-break-inside: avoid;
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 20px;
         }
-        
-        .job-header {
+
+        .skill-category {
             margin-bottom: 8px;
+            width: 100%;
         }
-        
-        .job-title {
+
+        .skill-category-title {
+            font-weight: bold;
             font-size: 10pt;
-            font-weight: 600;
             color: #2d5555;
-            line-height: 1.3;
+            display: inline;
         }
-        
-        .job-details {
-            font-size: 9pt;
+
+        .skill-list {
+            font-size: 10pt;
+            display: inline;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 3px solid #e8f0f0;
+        }
+
+        .experience-item:hover {
+            border-left-color: #2d5555;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .job-company {
+            font-size: 10pt;
+            color: #2d5555;
+            font-weight: 600;
+        }
+
+        .job-location-date {
+            font-size: 10pt;
             color: #666;
-            margin-top: 3px;
         }
-        
+
         .achievements {
             list-style: none;
-            margin-top: 6px;
+            margin-top: 5px;
+            padding-left: 0;
         }
-        
+
         .achievements li {
-            margin-bottom: 3px;
-            padding-left: 12px;
+            margin-bottom: 4px;
+            padding-left: 15px;
             position: relative;
-            font-size: 9pt;
-            line-height: 1.4;
+            font-size: 10pt;
             text-align: justify;
         }
-        
+
         .achievements li:before {
             content: "•";
-            color: #4a9999;
-            font-weight: bold;
             position: absolute;
             left: 0;
+            color: #2d5555;
+            font-weight: bold;
         }
-        
+
+        /* Education & Certifications */
         .education-item {
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
-        
+
         .degree {
             font-size: 10pt;
-            font-weight: 600;
-            color: #2d5555;
-            margin-bottom: 2px;
+            font-weight: bold;
+            color: #333;
         }
-        
+
         .school {
-            font-size: 9pt;
-            color: #4a9999;
-            margin-bottom: 2px;
+            font-size: 10pt;
+            color: #555;
         }
-        
-        .edu-date {
-            font-size: 9pt;
-            color: #777;
-            font-style: italic;
+
+        .cert-item {
+            font-size: 10pt;
+            margin-bottom: 4px;
         }
-        
-        .highlight {
-            background: #fffbeb;
-            border-left: 3px solid #fbbf24;
-            padding: 8px 12px;
-            margin: 8px 0;
-            font-size: 9pt;
-            border-radius: 0 4px 4px 0;
-        }
-        
+
+        /* Print Styles */
         @media print {
-            body { 
-                -webkit-print-color-adjust: exact;
+            body {
                 background: white;
                 margin: 0;
             }
-            .resume { 
+
+            .resume {
                 margin: 0;
+                padding: 0.4in 0.5in;
                 box-shadow: none;
                 max-width: none;
-                min-height: auto;
-                height: auto;
-                page-break-after: auto;
             }
-            .sidebar {
-                page-break-inside: avoid;
-                min-height: auto;
+
+            .print-button {
+                display: none !important;
             }
-            .main-content {
-                page-break-inside: auto;
-                min-height: auto;
-            }
+
             .experience-item {
-                page-break-inside: avoid;
-                break-inside: avoid;
+                border-left-color: #2d5555;
             }
-            .section {
-                page-break-inside: avoid;
-                break-inside: avoid;
+
+            .experience-item:hover {
+                border-left-color: #2d5555;
             }
-            .print-button { display: none; }
-            
-            /* Ensure content flows to next page when needed */
+
+            .contact-info a {
+                color: #2d5555;
+            }
+
             @page {
-                margin: 0.5in;
+                margin: 0.25in;
                 size: letter;
             }
         }
-    </style>
-    <script>
-        function printResume() {
-            window.print();
+
+        .print-button {
+            text-align: center;
+            padding: 10px;
+            background: #f0f0f0;
         }
-        
-        // Auto-print when accessed via download
-        window.addEventListener('load', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('print') === 'true') {
-                setTimeout(printResume, 500);
-            }
-        });
-    </script>
+
+        .print-button button {
+            background: #2d5555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .print-button button:hover {
+            background: #3d6666;
+        }
+
+        .print-button p {
+            margin: 5px 0 0 0;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
 </head>
+
 <body>
-    <div style="text-align: center; padding: 10px; background: #f0f0f0; print: none;" class="print-button">
-        <button onclick="printResume()" style="background: #4a9999; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 14px;">
-            🖨️ Print/Save as PDF
-        </button>
-        <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Use your browser's print function to save as PDF</p>
+    <div class="print-button">
+        <button onclick="window.print()">Print / Save as PDF</button>
+        <p>Use your browser's print function to save as PDF</p>
     </div>
-    
+
     <div class="resume">
-        <div class="sidebar">
-            <div class="profile-section">
-                <div class="profile-pic">
-                    <img src="/david-profile.jpg" alt="David Cornealius" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                </div>
-                <div class="name">Mechanical<br>Designer</div>
-                <div class="title">Engineer-To-Order (ETO) Design Specialist<br>15+ Years in Cryogenic & Industrial Equipment Design</div>
-            </div>
-            
+        <header class="header">
+            <h1 class="name">DAVID CORNEALIUS</h1>
+            <div class="title">Mechanical Designer | Engineer-To-Order (ETO) Design Specialist</div>
             <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon">📱</span>
-                    <span>832-584-1634</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <span>DavidCornealius@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🔗</span>
-                    <span>LinkedIn</span>
-                </div>
+                <span>281-756-7118</span>
+                <span class="contact-divider">|</span>
+                <span>DavidCornealius@gmail.com</span>
+                <span class="contact-divider">|</span>
+                <span>Beasley, TX</span>
+                <span class="contact-divider">|</span>
+                <span><a href="https://linkedin.com/in/david-cornealius">LinkedIn</a></span>
             </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Core Competencies</div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>SolidWorks Expert (3D Modeling, Assemblies, Piping Module)
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Cryogenic Applications & Industrial Equipment Design
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Product Lifecycle Management (PLM) Environments
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Design for Manufacturing & Quality Principles
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Industrial Piping & Vessel Design Principles
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Bills of Materials & Fabrication Documentation
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Cross-Departmental Collaboration & Team Leadership
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Daily Shop Floor Engagement & Production Support
-                </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+                Mechanical Designer with 15+ years of experience in cryogenic applications and industrial equipment design.
+                Currently at Chart Industries with proven expertise in SolidWorks 3D modeling, PLM environments, and
+                concept-to-manufacturing workflows. Strong track record in cross-departmental collaboration, daily shop floor
+                engagement, and maintaining accuracy standards for complex mechanical assemblies. Extensive background in
+                industrial piping, vessel design principles, and design for manufacturing quality processes.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skill-category">
+                <span class="skill-category-title">CAD Software:</span>
+                <span class="skill-list">SolidWorks (Advanced), SolidWorks Piping & Routing Module, AutoCAD, Autodesk Inventor</span>
             </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Software Proficiency</div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>SolidWorks (Advanced - CSWP Certified)
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>SolidWorks Piping & Routing Module
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Product Lifecycle Management (PLM) Systems
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Microsoft Office Suite (Advanced)
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>AutoCAD & Technical Drafting
-                </div>
-                <div class="skill-item">
-                    <span class="skill-bullet">•</span>Design Analysis Tools (FEA/CFD)
-                </div>
+            <div class="skill-category">
+                <span class="skill-category-title">Design Expertise:</span>
+                <span class="skill-list">Cryogenic Equipment Design, Industrial Piping Systems, Pressure Vessel Design, Design for Manufacturing (DFM)</span>
             </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Certifications</div>
-                <div class="certification-item">
-                    <div class="cert-name">Certified SolidWorks Professional (CSWP)</div>
-                </div>
-                <div class="certification-item">
-                    <div class="cert-name">Project Management Professional (PMP)</div>
-                </div>
+            <div class="skill-category">
+                <span class="skill-category-title">Engineering Tools:</span>
+                <span class="skill-list">Product Lifecycle Management (PLM) Systems, FEA (Finite Element Analysis), Bills of Materials, Technical Documentation</span>
             </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Professional Affiliations</div>
-                <div class="certification-item">
-                    <div class="cert-name">American Society of Mechanical Engineers (ASME)</div>
-                </div>
-                <div class="certification-item">
-                    <div class="cert-name">Society of Automotive Engineers (SAE)</div>
-                </div>
+            <div class="skill-category">
+                <span class="skill-category-title">Core Competencies:</span>
+                <span class="skill-list">Cross-Departmental Collaboration, Shop Floor Support, Quality Assurance, Project Coordination</span>
             </div>
-        </div>
-        
-        <div class="main-content">
-            <div class="profile-section">
-                <div class="name" style="color: #2d5555; text-align: left; font-size: 18pt; margin-bottom: 5px;">DAVID CORNEALIUS</div>
-            </div>
-            
-            <div class="section">
-                <div class="main-title">Professional Summary</div>
-                <div class="objective-text">
-                    Accomplished Mechanical Designer II with 15+ years of specialized experience in cryogenic applications and industrial equipment design. Currently employed at Chart Industries with proven expertise in SolidWorks 3D modeling, PLM environments, and concept-to-manufacturing workflows. Demonstrated excellence in cross-departmental collaboration, daily shop floor engagement, and maintaining accuracy standards for complex mechanical assemblies. Strong background in industrial piping, vessel design principles, and design for manufacturing quality processes.
-                </div>
-                <div class="highlight">
-                    <strong>Ideal Fit for Mechanical Designer II:</strong> Current Chart Industries employee with 5+ years direct experience in cryogenic equipment design, advanced SolidWorks certification including piping module, extensive PLM environment experience, and proven track record of daily shop floor collaboration and cross-departmental teamwork.
-                </div>
-            </div>
-            
-            <div class="section">
-                <div class="section-title">Professional Experience</div>
-                
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Mechanical Designer II • Chart Industries (Hudson Products) • New York, NY • Sep 2019 - Current</div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Mechanical Designer II</span>
+                        <span class="job-company"> | Chart Industries (Hudson Products)</span>
                     </div>
-                    <ul class="achievements">
-                        <li>Create and maintain accurate 3D models and assemblies for cryogenic applications using SolidWorks, serving as mechanical focal point in cross-functional team environment</li>
-                        <li>Manage complete design lifecycle from concept through manufacturing, incorporating company standards and procedures into all associated technical drawings and documentation</li>
-                        <li>Generate comprehensive bills of materials and fabrication prints for industrial equipment ranging from small precision components to large-scale cryogenic systems</li>
-                        <li>Facilitate design review meetings with engineering, manufacturing, and quality departments, ensuring alignment on project requirements and approval processes</li>
-                        <li>Collaborate daily with shop floor personnel during production phases, providing real-time technical support and resolving manufacturing challenges with high accuracy</li>
-                        <li>Work extensively with purchasing and suppliers to verify geometry specifications and part identification for purchased components, ensuring design integrity</li>
-                        <li>Operate efficiently within PLM environment, maintaining version control and design documentation standards while working independently on multiple concurrent projects</li>
-                        <li>Apply industrial piping and vessel design principles to develop robust cryogenic equipment solutions meeting ASME standards and customer specifications</li>
-                    </ul>
+                    <div class="job-location-date">Beasley, TX | Sep 2019 - Present</div>
                 </div>
-                
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Senior Mechanical Designer • Inova Geophysical • Sugar Land, TX • Oct 2018 - Sep 2019</div>
-                    </div>
-                    <ul class="achievements">
-                        <li>Designed precision mechanical assemblies using SolidWorks in PLM environment, reducing manufacturing costs by 15% through design for manufacturing principles</li>
-                        <li>Collaborated with cross-functional teams including purchasing, quality, and production to ensure seamless design-to-manufacturing transitions</li>
-                        <li>Created detailed technical documentation and fabrication drawings supporting assembly processes with zero quality incidents</li>
-                        <li>Engaged regularly with shop floor teams to optimize designs for production efficiency and resolve real-time manufacturing challenges</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Senior Mechanical Designer • KBR • Houston, TX • May 2014 - Oct 2018</div>
-                    </div>
-                    <ul class="achievements">
-                        <li>Executed complex mechanical design projects for industrial piping systems and pressure vessels in petrochemical facilities valued at $500M+ total</li>
-                        <li>Applied industrial vessel design principles and ASME standards to create robust equipment solutions for high-pressure applications up to 2,500 PSI</li>
-                        <li>Collaborated extensively with process engineers and cross-functional teams to translate customer site requirements into detailed mechanical designs</li>
-                        <li>Maintained high accuracy standards while working independently on multiple concurrent projects, ensuring on-time delivery and customer satisfaction</li>
-                        <li>Developed comprehensive bills of materials and fabrication documentation supporting large-scale industrial equipment manufacturing</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Mechanical Designer • Control Flow, Inc. • Houston, TX • Dec 2010 - May 2014</div>
-                    </div>
-                    <ul class="achievements">
-                        <li>Designed complex industrial equipment assemblies for offshore applications, achieving 99.7% reliability rating through meticulous design and documentation</li>
-                        <li>Created detailed bills of materials and manufacturing drawings for hydraulic systems and motion compensation equipment</li>
-                        <li>Collaborated with manufacturing teams and suppliers to optimize designs for production efficiency and quality compliance</li>
-                    </ul>
-                </div>
+                <ul class="achievements">
+                    <li>Create and maintain accurate 3D models and assemblies for cryogenic applications using SolidWorks, serving as mechanical focal point in cross-functional team environment</li>
+                    <li>Manage complete design lifecycle from concept through manufacturing, incorporating company standards and procedures into all associated technical drawings and documentation</li>
+                    <li>Generate comprehensive bills of materials and fabrication prints for industrial equipment ranging from small precision components to large-scale cryogenic systems</li>
+                    <li>Facilitate design review meetings with engineering, manufacturing, and quality departments, ensuring alignment on project requirements and approval processes</li>
+                    <li>Collaborate daily with shop floor personnel during production phases, providing real-time technical support and resolving manufacturing challenges</li>
+                    <li>Work with purchasing and suppliers to verify geometry specifications and part identification for purchased components, ensuring design integrity</li>
+                    <li>Operate efficiently within PLM environment, maintaining version control and design documentation standards while working independently on multiple concurrent projects</li>
+                    <li>Apply industrial piping and vessel design principles to develop cryogenic equipment solutions meeting ASME standards and customer specifications</li>
+                </ul>
             </div>
-            
-            <div class="section">
-                <div class="section-title">Education</div>
-                <div class="education-item">
-                    <div class="degree">M.S. in Mechanical Engineering - Design and Manufacturing</div>
-                    <div class="school">University of Technology • Sep 2013 - May 2015</div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Senior Mechanical Designer</span>
+                        <span class="job-company"> | Inova Geophysical</span>
+                    </div>
+                    <div class="job-location-date">Sugar Land, TX | Oct 2018 - Sep 2019</div>
                 </div>
-                <div class="education-item">
-                    <div class="degree">B.S. in Mechanical Engineering</div>
-                    <div class="school">University of Technology • Sep 2009 - May 2013</div>
-                </div>
+                <ul class="achievements">
+                    <li>Designed precision mechanical assemblies using SolidWorks in PLM environment, reducing manufacturing costs by 15% through design for manufacturing principles</li>
+                    <li>Collaborated with cross-functional teams including purchasing, quality, and production to ensure seamless design-to-manufacturing transitions</li>
+                    <li>Created detailed technical documentation and fabrication drawings supporting assembly processes with zero quality incidents</li>
+                    <li>Engaged regularly with shop floor teams to optimize designs for production efficiency and resolve real-time manufacturing challenges</li>
+                </ul>
             </div>
-        </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Senior Mechanical Designer</span>
+                        <span class="job-company"> | KBR</span>
+                    </div>
+                    <div class="job-location-date">Houston, TX | May 2014 - Oct 2018</div>
+                </div>
+                <ul class="achievements">
+                    <li>Executed complex mechanical design projects for industrial piping systems and pressure vessels in petrochemical facilities valued at $500M+ total</li>
+                    <li>Applied industrial vessel design principles and ASME standards to create equipment solutions for high-pressure applications up to 2,500 PSI</li>
+                    <li>Collaborated extensively with process engineers and cross-functional teams to translate customer site requirements into detailed mechanical designs</li>
+                    <li>Maintained high accuracy standards while working independently on multiple concurrent projects, ensuring on-time delivery</li>
+                    <li>Developed comprehensive bills of materials and fabrication documentation supporting large-scale industrial equipment manufacturing</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Mechanical Designer</span>
+                        <span class="job-company"> | Control Flow, Inc.</span>
+                    </div>
+                    <div class="job-location-date">Houston, TX | Dec 2010 - May 2014</div>
+                </div>
+                <ul class="achievements">
+                    <li>Designed complex industrial equipment assemblies for offshore applications, achieving 99.7% reliability rating through meticulous design and documentation</li>
+                    <li>Created detailed bills of materials and manufacturing drawings for hydraulic systems and motion compensation equipment</li>
+                    <li>Collaborated with manufacturing teams and suppliers to optimize designs for production efficiency and quality compliance</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <span class="degree">Associate's Degree in Computer Aided Drafting</span>
+                <span class="school"> | San Jacinto College | 2005</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-item">Autodesk Certified Professional - Inventor</div>
+        </section>
     </div>
 </body>
-</html> 
+
+</html>

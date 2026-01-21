@@ -45,6 +45,7 @@ interface Profile {
   email: string
   phone: string
   location: string
+  linkedin?: string
   summary: string
   avatar: string
   profileImage?: string
@@ -206,11 +207,12 @@ const projectData: Record<string, Project[]> = {
 const profiles: Record<string, Profile> = {
   david: {
     name: "David Cornealius",
-    title: "Senior Mechanical Designer",
+    title: "Mechanical Designer II",
     email: "DavidCornealius@gmail.com",
     phone: "281-756-7118",
-    location: "Houston, TX",
-    summary: "Innovative and detail-oriented Mechanical Design Engineer with over 15 years of experience in the design and development of mechanical systems. Proven track record in leading projects from concept through to production, with a strong focus on sustainability and efficiency. Seeking to leverage expertise in CAD software and project management to contribute to cutting-edge projects.",
+    location: "Beasley, TX",
+    linkedin: "https://linkedin.com/in/david-cornealius",
+    summary: "Mechanical Designer with 15+ years of experience in cryogenic applications and industrial equipment design. Currently at Chart Industries with proven expertise in SolidWorks 3D modeling, PLM environments, and concept-to-manufacturing workflows. Strong track record in cross-departmental collaboration, daily shop floor engagement, and maintaining accuracy standards for complex mechanical assemblies.",
     avatar: "DC",
     profileImage: "/david-profile.jpg",
   }
@@ -221,8 +223,8 @@ const allExperiences: Record<string, Experience[]> = {
     {
       id: "chart-industries",
       company: "Chart Industries (Hudson Products)",
-      position: "Senior Mechanical Designer",
-      location: "New York, NY",
+      position: "Mechanical Designer II",
+      location: "Beasley, TX",
       startDate: "Sep 2019",
       endDate: "Present",
       logo: "🏭",
@@ -2066,7 +2068,7 @@ function ContactSection({ currentProfile, downloadResume }: { currentProfile: st
               }
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
                 <Mail className="w-8 h-8 mx-auto mb-4 opacity-80" />
                 <h3 className="font-semibold mb-2">Email</h3>
@@ -2082,6 +2084,15 @@ function ContactSection({ currentProfile, downloadResume }: { currentProfile: st
                 <h3 className="font-semibold mb-2">Location</h3>
                 <p className="opacity-80">{profile.location}</p>
               </div>
+              {profile.linkedin && (
+                <div className="text-center">
+                  <Linkedin className="w-8 h-8 mx-auto mb-4 opacity-80" />
+                  <h3 className="font-semibold mb-2">LinkedIn</h3>
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline">
+                    View Profile
+                  </a>
+                </div>
+              )}
             </div>
 
             <div className="flex justify-center gap-4">
